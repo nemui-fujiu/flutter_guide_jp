@@ -53,7 +53,7 @@ Tools • Dart 2.1.0 (build 2.1.0-dev.9.4 f9ebf21297)
 ```~/.bash_profile
 export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin"
 ```
-※ 「$HOME」を実際のパスと置き換えてください。
+※ 「[PATH_TO_FLUTTER_GIT_DIRECTORY]」を実際のパスと置き換えてください。
 
 ### 2. Flutterの実行環境を整える。
 
