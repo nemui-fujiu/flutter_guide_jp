@@ -5,8 +5,8 @@
 
 ## 目次
 
-- インストール
-- [チュートリアル](./install/mac.md)
+- [インストール](./install/mac.md)
+- [チュートリアル](./tutorial/tutorial01.md)
 - 概要
 
 - レイアウト
