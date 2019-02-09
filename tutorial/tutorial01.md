@@ -21,7 +21,7 @@ weight: 21
 
 2.次に**[Flutter Application]**を選択してください。
 
-<img src="/images/tutorial/01/02_select_app_type.png" width="500px" alt="settings">
+<img src="http://flutter.ctrnost.com/images/tutorial/01/02_select_app_type.png" width="500px" alt="settings">
 
 
 
