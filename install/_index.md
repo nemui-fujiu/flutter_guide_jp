@@ -1,7 +1,7 @@
 ---
 title: "インストール"
 date: 2019-02-07T00:00:00+09:00
-draft: ture
+draft: false
 weight: 10
 ---
 
