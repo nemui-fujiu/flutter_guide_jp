@@ -4,13 +4,13 @@ date: 2019-02-07T00:00:00+09:00
 draft: false
 ---
 
-<img src="/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
+<img src="http://flutter.ctrnost.com/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
 
 # Flutter Guide JP
 
 ---
 
-日本におけるFlutterでのアプリ開発が広く利用され、アプリ開発の効率が向上することを願って、日本によるFlutterの情報を配信していきます。
+日本におけるFlutterでのアプリ開発が広く利用され、アプリ開発の効率が向上することを願って、日本語によるFlutterの情報を配信していきます。
 
 ## 目次
 
