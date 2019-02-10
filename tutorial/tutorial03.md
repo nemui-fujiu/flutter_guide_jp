@@ -1,5 +1,5 @@
 ---
-title: "リスト表示の作成"
+title: "Starter Flutter app"
 date: 2019-02-08T00:00:00+09:00
 draft: false
 weight: 23
@@ -47,25 +47,27 @@ void main()  {
 } 
 ```
 2.「StatelessWidget」を継承することでアプリ自体がWidgetになります。  
-Flutterでは、配置やパディング、レイアウトに関するほとんどすべてがウィジェットでできています。  
-[Wifgets](https://flutter.io/docs/development/ui/widgets)
+Flutterでは、配置やパディング、レイアウトに関するほとんどすべてがウィジェットでできています。    
+[Widget](https://docs.flutter.io/flutter/widgets/Widget-class.html)  
+他にどんなウィジェットがあるかは[Widget catalog](https://flutter.io/docs/development/ui/widgets)をみてみるといいでしょう。
 
-3.ウィジェットの「build()」メソッドでウィジェットのUIを作成します。
+
+3.ウィジェットの「build()」メソッドでウィジェットのUIを作成します。  
 [build](https://docs.flutter.io/flutter/widgets/State/build.html)
 
 4.今回のアプリは、マテリアルデザインのアプリを作成します。
 マテリアルデザインは、Googleが提唱、推進しているデザインで、Webやモバイルアプリなどの標準的なビジュアルデザインを提供しています。  
-Flutterでは豊富なマテリアルデザインのウィジェットが提供されています。
+Flutterでは豊富なマテリアルデザインのウィジェットが提供されています。  
 [Material design](https://material.io/design/)
 
 5.Scaffoldウィジェットは、アプリケーションバーやタイトル、ホーム画面のウィジェットツリーを保持する、bodyプロパティを提供します。
-ウィジェットのサブツリーはかなり複雑になる可能性があります。
+ウィジェットのサブツリーはかなり複雑になる可能性があります。  
 [Scaffold](https://docs.flutter.io/flutter/material/Scaffold-class.html)
 
-6.appBarにはWidgetのヘッダーに表示するアプリケーションバーを表現することができます。
+6.appBarにはWidgetのヘッダーに表示するアプリケーションバーを表現することができます。   
 [AppBar](https://docs.flutter.io/flutter/material/AppBar-class.html)
 
-7.bodyではさまさまな表現が可能です、今回は「Center」で中央配置にし「Text」で文字列を配置しています。
+7.bodyではさまさまな表現が可能です、今回は「Center」で中央配置にし「Text」で文字列を配置しています。  
 [Layout](https://flutter.io/docs/development/ui/layout)
 
 
