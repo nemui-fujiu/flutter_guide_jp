@@ -9,12 +9,9 @@ weight: 22
 
 ## 起動
 
-1.Android Studioのメインツールバーの以下部分で、エミュレータを選択してください。
-
+1. Android Studioのメインツールバーの以下部分で、エミュレータを選択してください。
 <img src="http://flutter.ctrnost.com/images/tutorial/02/01_emulator.png" width="400px" alt="choice emulator">
-
-2.エミュレータが立ち上がったらアプリケーションを実行してみましょう。
-
+2. エミュレータが立ち上がったらアプリケーションを実行してみましょう。
 <img src="http://flutter.ctrnost.com/images/tutorial/02/02_app_build.png" width="400px" alt="ranable app">
 
 ## ホットリロード
@@ -22,24 +19,21 @@ weight: 22
 ホットリロードとは、アプリを再起動せず、修正を反映させる機能のことを言います。
 Flutterはデフォルトでホットリロードが有効になっているので、ソースの変更を保存するとエミュレータですぐに確認することが可能です。
 
-1.```lib/main.dart```を開いてください。
-
-2.以下部分を編集します。
-```dart
-Text(
-  'You have pushed the button this many times:',
-),
-```
-↓
-```dart
-Text(
-  'ボタンを押した回数:',
-),
-```
-3.ソースを保存するとエミュレータの文字列が書き換わったのがわかると思います。
-
-Before:
-<img src="http://flutter.ctrnost.com/images/tutorial/02/03_before.png" width="400px" alt="before">
-
-After:
+1. ```lib/main.dart```を開いてください。
+2. 以下部分を編集します。
+    ```dart
+    Text(
+      'You have pushed the button this many times:',
+    ),
+    ```
+    ↓
+    ```dart
+    Text(
+      'ボタンを押した回数:',
+    ),
+    ```
+3. ソースを保存するとエミュレータの文字列が書き換わったのがわかると思います。   
+Before:   
+<img src="http://flutter.ctrnost.com/images/tutorial/02/03_before.png" width="400px" alt="before">   
+After:  
 <img src="http://flutter.ctrnost.com/images/tutorial/02/04_after.png" width="400px" alt="after">
