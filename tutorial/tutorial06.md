@@ -114,4 +114,4 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
 6. 実行   
 ソースを保存しホットリロードが実行されることで、ソースが書き換わります。  
 実際に作成されたサンプルを触って英文リストが永遠と作成されるListViewが作成されたのを確認してみてください。  
-<img src="/images/tutorial/06/01_ListView.png" width="600px"  alt="ListView">
+<img src="http://flutter.ctrnost.com/images/tutorial/06/01_ListView.png" width="600px"  alt="ListView">
