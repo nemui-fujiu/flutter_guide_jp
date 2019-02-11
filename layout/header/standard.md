@@ -160,16 +160,17 @@ class MyApp extends StatelessWidget {
       title: 'Standard AppBar',
       home: Scaffold(
         appBar:AppBar(
-          title: Text('YourAppTitle'),
+          centerTitle: true,
+          title: const Text('YourAppTitle'),
           leading: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/logo.png',
-                fit: BoxFit.contain,
-                height: 32,
-              ),
-            ]
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/logo.png',
+                  fit: BoxFit.contain,
+                  height: 32,
+                ),
+              ]
           ),
         )
       )
