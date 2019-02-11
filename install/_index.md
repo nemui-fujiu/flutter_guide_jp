@@ -78,44 +78,36 @@ $ fluttter doctor
 
 ### 3. iOSセットアップ
 
-1.Xcode9.0以降をインストールしてください。
+1. Xcode9.0以降をインストールしてください。
+2. 以下のように設定することで最新のXcodeが指定できます。
+   
+    ```
+    $ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+    ```   
+    別のバージョンを利用したい場合は、パスを設定してください。  
+3. Xcodeを開いて確認するか以下コマンドにて、仕様許諾に同意してください。
 
-2.以下のように設定することで最新のXcodeが指定できます。
+    ```
+    $ sudo xcodebuild -license
+    ```
 
-```
-$ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-```
-
-別のバージョンを利用したい場合は、パスを設定してください。
-
-3.Xcodeを開いて確認するか以下コマンドにて、仕様許諾に同意してください。
-
-```
-$ sudo xcodebuild -license
-```
-
-4.シミュレータを設定する。
-
+4. シミュレータを設定する。   
    以下のようにコマンドで起動するか、Spotlightなどでシミュレータを起動させます。
+    ```
+    $ open -a Simulator
+    ```
 
-```
-$ open -a Simulator
-```
-
-5.シミュレータを起動して**[ハードウェア]>[デバイス]**メニューの設定を確認して、シミュレータが64ビットデバイス(iPhone5s以降)を使用していることを確認してください。
+5. シミュレータを起動して**[ハードウェア]>[デバイス]**メニューの設定を確認して、シミュレータが64ビットデバイス(iPhone5s以降)を使用していることを確認してください。
 
 ### 4. Androidの設定
 
 1. [Android Studio](https://developer.android.com/studio/)をインストールしてください。
 
-2. Android Studioを起動して、「Android Studioセットアップウィザード」を実行します。
-
+2. Android Studioを起動して、「Android Studioセットアップウィザード」を実行します。   
    Flutterに必要な、最新のSDKをインストールしてください。
 
-3. エミュレータを設定する。
-
-   起動の**[Android Studio] > [Tools] > [Android] > [AVD Manager]**から**[Create Virtual Device]**を選択して新規にエミュレータを作成してください。
-
+3. エミュレータを設定する。   
+   エミュレータを起動するには**[Android Studio] > [Tools] > [Android] > [AVD Manager]**から**[Create Virtual Device]**を選択して新規に作成してください。   
    エミュレータを作成するときは**x86**または**x86_64**のイメージが推奨されています。
 
 

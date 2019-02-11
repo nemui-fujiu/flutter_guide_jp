@@ -35,7 +35,7 @@ keywords = "Flutter,アプリ,日本語,レイアウト,入門"
   - DB
   - API
 
-- 設定
+- [設定](/settings)
 
 ---
 
