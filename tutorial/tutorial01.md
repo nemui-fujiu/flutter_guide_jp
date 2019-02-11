@@ -1,14 +1,14 @@
----
-title: "アプリ作成"
-date: 2019-02-08T00:00:00+09:00
-draft: false
-weight: 21
----
++++
+title = "アプリ作成"
+date = 2019-02-08T00:00:00+09:00
+draft = false
+weight = 21
+description = "いくつかの簡単な操作を行って実際にアプリケーションを動かしてみましょう。AndroidStudioを使って開発するのでまずはプロジェクトの作成を行います。"
+keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,AndroidStudio,プロジェクト作成"
++++
 
 今回はいくつかの簡単な操作を行って実際にアプリケーションを動かしてみましょう。
-
-今回はAndroid Studioを使って作っていきます。
-
+今回はAndroid Studioを使ってプロジェクトの作成を行います。
 
 
 ## Android Studio / IntelliJ
@@ -21,7 +21,7 @@ weight: 21
 また、Flutter SDK Pathが正しいことを確認してください。
 <img src="http://flutter.ctrnost.com/images/tutorial/01/03_create_app.png" width="500px" alt="input domain">
 4. ドメインを記入して、**[Platform channel language]**を選択して**[Finish]**を押すとアプリが作成されます。
-<img src="http://flutter.ctrnost.com/images/tutorial/01/04_package.png" width="500px">
+<img src="http://flutter.ctrnost.com/images/tutorial/01/04_package.png" width="500px" alt="input package">
 
 
 

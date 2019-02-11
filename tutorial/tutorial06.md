@@ -1,13 +1,15 @@
----
-title: "無限スクロールListView"
-date: 2019-02-09T00:00:00+09:00
-draft: false
-weight: 26
----
++++
+title = "無限スクロールListView"
+date = 2019-02-09T00:00:00+09:00
+draft = false
+weight = 26
+description = "ListViewを使って無限スクロールするさらにアプリっぽいレイアウトを作成しましょう！これでListViewの簡単な動きもわかってくると思います。"
+keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,ListView"
++++
 
 ## Step4
 
-今度は無限スクロールのListViewを作っていきましょう。   
+今度はListViewを使って無限スクロールするさらにアプリっぽいレイアウトを作成しましょう！  
 やっとアプリっぽくなってきましたね。
 
 先ほど作成した、RandomWordStateを使いリストを作成していきます。   
@@ -115,3 +117,64 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
 ソースを保存しホットリロードが実行されることで、ソースが書き換わります。  
 実際に作成されたサンプルを触って英文リストが永遠と作成されるListViewが作成されたのを確認してみてください。  
 <img src="http://flutter.ctrnost.com/images/tutorial/06/01_ListView.png" width="600px"  alt="ListView">
+
+## チュートリアル終了
+最終的にはこんな感じのソースになっていると思います。  
+チュートリアルはここで一旦終了です。  
+それではFlutterで開発効率をあげて面白くて役に立つ新しいアプリをいっぱい作っていただければ幸いです。
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Startup Name Generator',
+      home: RandomWords()
+    );
+  }
+}
+
+class RandomWordsState extends State<RandomWords> {
+  final _suggestions = <WordPair>[];
+  final _biggerFont = const TextStyle(fontSize: 18.0);
+  @override
+  Widget build(BuildContext context) {  return Scaffold(
+    appBar: AppBar(
+      title: Text('Startup Name Generator'),
+    ),
+    body: _buildSuggestions(),
+  );
+  }
+  Widget _buildSuggestions() {
+    return ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: (context, i) {
+          if (i.isOdd) return Divider();
+
+          final index = i ~/ 2;
+          if (index >= _suggestions.length) {
+            _suggestions.addAll(generateWordPairs().take(10));
+          }
+          return _buildRow(_suggestions[index]);
+        });
+  }
+  Widget _buildRow(WordPair pair) {
+    return ListTile(
+      title: Text(
+        pair.asPascalCase,
+        style: _biggerFont,
+      ),
+    );
+  }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => new RandomWordsState();
+}
+```
