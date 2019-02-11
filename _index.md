@@ -1,8 +1,10 @@
----
-title: "Flutter Guide JP"
-date: 2019-02-07T00:00:00+09:00
-draft: false
----
++++
+title = "Flutter Guide JP"
+date = 2019-02-07T00:00:00+09:00
+draft = false
+description = "日本におけるFlutterでのアプリ開発が広く利用され、アプリ開発の効率が向上することを願って、日本によるFlutterの情報を配信していきます。"
+keywords = "Flutter,アプリ,日本語,レイアウト,入門"
++++
 
 <img src="http://flutter.ctrnost.com/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
 
@@ -17,8 +19,7 @@ draft: false
 - [インストール](/install/)
 - [チュートリアル](/tutorial/)
 - 概要
-
-- レイアウト
+- [レイアウト](/layout/)
   - Header
     - タブ
   - Body

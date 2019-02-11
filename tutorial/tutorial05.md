@@ -1,13 +1,19 @@
----
-title: "Statefulウィジェット"
-date: 2019-02-09T00:00:00+09:00
-draft: false
-weight: 25
----
++++
+title = "Statefulウィジェット"
+date = 2019-02-09T00:00:00+09:00
+draft = false
+weight = 25
+description = "FlutterにはStatelessとStatefulの2種類のWidgetがあります。Statefulウィジェットを利用して値を保持できるようになり作成できるアプリの幅を広げましょう！"
+keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,StatefulWidget,StatelessWidget"
++++
 
 ## Step3
 
-さてここではStatefulWidgetを利用していきましょう。
+さてここではStatefulWidgetを利用していきましょう。  
+FlutterにはStatelessとStatefulの2種類のWidgetがあります。   
+今回はそれぞれの違いを理解しつつ、Statefulウィジェットを利用して値を保持できるようなアプリを作れるようになりましょう！
+
+### StatefulWidget & StatelessWidget
 
 StatelessWidgetで扱うあたいはすべて不変的でありプロパティを変更することはできません。  
 すべての値はfinalな値となります。

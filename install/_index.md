@@ -1,9 +1,11 @@
----
-title: "インストール"
-date: 2019-02-07T00:00:00+09:00
-draft: false
-weight: 10
----
++++
+title = "インストール"
+date = 2019-02-07T00:00:00+09:00
+draft = false
+weight = 10
+description = "Flutterをインストールしてアプリ開発を始メル準備を始めましょう。Flutterのインストールはとても簡単に行うことができます！"
+keywords = "Flutter,アプリ,日本語,インストール,install,入門"
++++
 
 それでは最初にFlutterのインストールから始めましょう。
 環境によってインストール方法が異なるため、注意してください。
