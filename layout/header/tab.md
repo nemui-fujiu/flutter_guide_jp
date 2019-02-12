@@ -14,7 +14,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 
 ---
 
-<img src="/images/layout/header/tab/tab_header.png" style="min-width:500px" alt="tab header" />
+<img src="http://flutter.ctrnost.com/images/layout/header/tab/tab_header.png" style="min-width:300px" alt="tab header" />
 
 
 ```dart
@@ -98,7 +98,7 @@ class ChoiceCard extends StatelessWidget {
 
 先に紹介したタブヘッダーを以下のように変更すると、アイコンなしタブヘッダーを実現できます。
 
-<img src="/images/layout/header/tab/tab_header02.png" style="min-width:500px" alt="tab2 header" />
+<img src="http://flutter.ctrnost.com/images/layout/header/tab/tab_header02.png" style="min-width:300px" alt="tab2 header" />
 
 以下のようにTabの引数からIconを抜けばOKです。
 
@@ -121,7 +121,7 @@ class ChoiceCard extends StatelessWidget {
 
 先に紹介したタブヘッダーを以下のように変更すると、スクロールタブを実現できます。
 
-<img src="/images/layout/header/tab/scroll_tab_header.png" style="min-width:500px" alt="scroll tab header" />
+<img src="http://flutter.ctrnost.com/images/layout/header/tab/scroll_tab_header.png" style="min-width:300px" alt="scroll tab header" />
 
 1. TabbedAppBarSampleクラスのTabBarに``isScrollable: true``を追加
     ```dart
