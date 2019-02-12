@@ -15,7 +15,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 
 ---
 
-<img src="http://flutter.ctrnost.com/images/layout/header/special/transparent.png" style="min-width:300px" alt="icon header" />
+<img src="http://flutter.ctrnost.com/images/layout/header/special/transparent.png" style="min-width:300px" alt="transparent header" />
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -69,3 +69,22 @@ class MyApp extends StatelessWidget {
 ```
 
 ※イメージの読み込み設定をしていない場合は[こちら](/settings/)
+
+
+## 半透過ヘッダー
+
+---
+
+<img src="http://flutter.ctrnost.com/images/layout/header/special/with_opacity.png" style="min-width:300px" alt="with opacity header" />
+
+
+上記「透過ヘッダー」のAppBarにある「backgroundColor」を以下のように変更すると半透明なヘッダーが作成可能です。
+
+```dart
+  Scaffold(
+    backgroundColor: Colors.transparent,
+    appBar: new AppBar(
+      title: const Text("Standard AppBar"),
+      backgroundColor: Colors.blue.withOpacity(0.3),
+      elevation: 0.0,
+```
