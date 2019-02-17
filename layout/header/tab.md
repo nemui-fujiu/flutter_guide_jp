@@ -2,7 +2,7 @@
 title = "タブ"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 33
+weight = 302
 description = "タブヘッダーで表現できるレイアウトをいくつか紹介します。使いそうなパターンを提示していこうと思います。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar,タブ,tab"
 +++
@@ -10,6 +10,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 タブヘッダーで表現できるレイアウトをいくつか紹介します。使いそうなパターンを提示していこうと思います。
 
 
+<span id="tab_header"></span>
 ## タブ
 
 ---
@@ -92,6 +93,7 @@ class ChoiceCard extends StatelessWidget {
 }
 ```
 
+<span id="tab_no_icon_header"></span>
 ## タブ(アイコンなし)
 
 ---
@@ -115,6 +117,7 @@ class ChoiceCard extends StatelessWidget {
   ),
 ```
 
+<span id="tab_scroll_header"></span>
 ## スクロールタブ
 
 ---

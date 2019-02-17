@@ -2,14 +2,14 @@
 title = "スタンダード"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 32
+weight = 302
 description = "よく利用されるスタンダードなヘッダーを紹介します。ご自身で作りたいレイアウトを見つけて参考にしてみてください。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar"
 +++
 
 
-## シンプルなヘッダー
-
+<span id="n_header"></span>
+## ノーマルヘッダー
 ---
 
 <img src="http://flutter.ctrnost.com/images/layout/header/standard/normal_header.png" style="min-width:300px" alt="normal header" />
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
+<span id="icon_header"></span>
 ## アイコン
 
 ---
@@ -66,6 +67,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
+<span id="popup_header"></span>
 ## ポップアップメニュー
 
 ---
@@ -120,7 +122,8 @@ const List<Choice> choices = const <Choice>[
 ];
 ```
 
-## ロゴ1
+<span id="logo_header"></span>
+## センターロゴヘッダー
 
 ---
 
@@ -156,7 +159,8 @@ class MyApp extends StatelessWidget {
 ```
 ※イメージの読み込み設定をしていない場合は[こちら](/settings/)
 
-## ロゴ2
+<span id="logo2_header"></span>
+## 左寄せロゴヘッダー
 
 ---
 
