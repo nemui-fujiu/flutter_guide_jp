@@ -2,7 +2,7 @@
 title = "レイアウト"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 30
+weight = 300
 description = "Flutterのレイアウトの基本パターンをいくつも用意して開発しやすくしたいと思います。目次から参考にできそうなレイアウトを探してみてください。"
 keywords = "Flutter,アプリ,入門,Layout,目次"
 +++
