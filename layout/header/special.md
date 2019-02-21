@@ -2,7 +2,7 @@
 title = "スペシャル"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 303
+weight = 413
 description = "スペシャルで特殊系なヘッダーが思いついたら、のっけていきます。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar,Special,透過"
 +++
