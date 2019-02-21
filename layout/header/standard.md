@@ -2,7 +2,7 @@
 title = "スタンダード"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 302
+weight = 411
 description = "よく利用されるスタンダードなヘッダーを紹介します。ご自身で作りたいレイアウトを見つけて参考にしてみてください。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar"
 +++

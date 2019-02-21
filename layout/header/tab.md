@@ -2,7 +2,7 @@
 title = "タブ"
 date = 2019-02-07T00:00:00+09:00
 draft = false
-weight = 302
+weight = 412
 description = "タブヘッダーで表現できるレイアウトをいくつか紹介します。使いそうなパターンを提示していこうと思います。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar,タブ,tab"
 +++
