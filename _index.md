@@ -19,7 +19,7 @@ keywords = "Flutter,アプリ,日本語,レイアウト,入門"
 - [インストール](/install/)
 - [チュートリアル](/tutorial/)
 - [概要](/basic/)
-  - [Flutterの基本](/basic/detail)
+  - [Flutterの基本](/basic/)
 - [レイアウト](/layout/)
   - [Header](/layout/header/)
         - [通常](/layout/header/standard)
