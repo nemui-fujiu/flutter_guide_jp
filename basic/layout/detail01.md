@@ -2,7 +2,7 @@
 title = "レイアウト概要"
 date = 2019-02-17T00:00:00+09:00
 draft = false
-weight = 301
+weight = 311
 description = "レイアウトの基本要素「Widget」について、どんなものがありどのように利用するのかを解説していきます。"
 +++
 
@@ -15,8 +15,8 @@ Flutterの基本構成はほとんど全てWidgetです。 Flutterアプリで�
 ウィジェットはツリー構造をイメージするとわかりやすいです。  
 人によってはHTMLやXMLのようなものとしても理解しやすいかもしれません。
 
-<img src="/images/layout/detail/icons.png" style="min-width:300px;border:1px solid gray" alt="icons"/>
-
+<img src="/images/basic/layout/01/icons.png" style="min-width:300px;border:1px solid gray" alt="icons"/>
+<span id="debugPaintSizeEnabled"></span>
 また、レイアウト構成を確認しながら作業をしたい場合は、「debugPaintSizeEnabled」を有効にすると以下のようになります。  
 もともとアプリエンジニアであれば皆さんよく行う手法ですが、アイテムそれぞれの背景色を変更して見た目を確認する作業に似ていますね。
 
@@ -30,15 +30,15 @@ void main() {
 }
 ```
 
-<img src="/images/layout/detail/icons_debug.png" style="min-width:300px;border:1px solid gray" alt="icons debug"/>
+<img src="/images/basic/layout/01/icons_debug.png" style="min-width:300px;border:1px solid gray" alt="icons debug"/>
 
 このように視覚的にわかりやすくなりましたが、どのようなウィジェットで構成されているのかをわかりやすくすると以下のような構造になります。
 
-<img src="/images/layout/detail/icon_wire.svg" style="min-width:300px;max-width:600px;border:1px solid gray" alt="icon wire"/>
+<img src="/images/basic/layout/01/icon_wire.svg" style="min-width:300px;max-width:600px;border:1px solid gray" alt="icon wire"/>
 
 さらにツリー構造に直すと以下のようになります。
 
-<img src="/images/layout/detail/tree.svg" style="min-width:300px;max-width:600px;border:1px solid gray" alt="tree"/>
+<img src="/images/basic/layout/01/tree.svg" style="min-width:300px;max-width:600px;border:1px solid gray" alt="tree"/>
 
 ### Container
 
@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<img src="/images/layout/detail/material_desgin.png" style="min-width:300px;max-width:600px;" alt="material desgin"/>
+<img src="/images/basic/layout/01/material_desgin.png" style="min-width:300px;max-width:600px;" alt="material desgin"/>
 
 また、マテリアルデザインを利用せずに自由なレイアウトで作成したい場合は、以下のように一つづつの要素を組み合わせて、配置することで自由にデザイン可能
 です。
@@ -111,7 +111,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<img src="/images/layout/detail/non_material_desgin.png" style="min-width:300px;max-width:600px;" alt="non material desgin"/>
+<img src="/images/basic/layout/01/non_material_desgin.png" style="min-width:300px;max-width:600px;" alt="non material desgin"/>
 
 デザインが適用されている状態と言うのがどう言うことかと言うと、例えば上記の例だとTextクラスに着目するとわかりやすいです。  
 マテリアルデザインを利用せずレイアウトする場合は、Textに必要な表示の詳細を設定しないと、正しく表示ができなくなってしまいます。　　
