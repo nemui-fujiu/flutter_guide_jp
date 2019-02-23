@@ -2,7 +2,7 @@
 title = "Container"
 date = 2019-02-21T00:00:00+09:00
 draft = false
-weight = 302
+weight = 312
 description = "Containerの基本について、どんなものがありどのように利用するのかを解説していきます。合わせてColorやPadding、Marginなども解説します。"
 +++
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<img src="/images/layout/detail/02/container_01.png" style="min-width:300px;max-width:600px;" alt="bule box"/>
+<img src="/images/basic/layout/02/container_01.png" style="min-width:300px;max-width:600px;" alt="bule box"/>
 
 このように背景色の指定、幅と高さを指定して青い四角を書いてみました。  
 widthやheightを変更することで自由にサイズを変更することができます。  
@@ -104,7 +104,7 @@ Colors.blue.shade900
   ),
 ```
 
-<img src="/images/layout/detail/02/container_02.png" style="min-width:300px;max-width:600px;" alt="text box"/>
+<img src="/images/basic/layout/02/container_02.png" style="min-width:300px;max-width:600px;" alt="text box"/>
 
 小さくて見辛いと思いますがこれで文字が表示されます。
 
@@ -124,7 +124,7 @@ Colors.blue.shade900
   ),
 ```
 
-<img src="/images/layout/detail/02/container_03.png" style="min-width:300px;max-width:600px;" alt="padding box"/>
+<img src="/images/basic/layout/02/container_03.png" style="min-width:300px;max-width:600px;" alt="padding box"/>
 
 Paddingは、EdgeInsetsクラスによって設定します。  
 全周囲にかける場合は```EdgeInsets.all```特定の辺にのみPaddingを付ける場合は```EdgeInsets.only```を使いましょう。
@@ -132,7 +132,7 @@ Paddingは、EdgeInsetsクラスによって設定します。
 ```dart
     padding: const EdgeInsets.only(top:50.0),
 ```
-<img src="/images/layout/detail/02/container_04.png" style="min-width:300px;max-width:600px;" alt="padding top box"/>
+<img src="/images/basic/layout/02/container_04.png" style="min-width:300px;max-width:600px;" alt="padding top box"/>
 
 #### Margin
 
@@ -148,7 +148,7 @@ Paddingを当てたので今度はMarginを指定してみましょう。
   ),
 ```
 
-<img src="/images/layout/detail/02/container_05.png" style="min-width:300px;max-width:600px;" alt="margin box"/>
+<img src="/images/basic/layout/02/container_05.png" style="min-width:300px;max-width:600px;" alt="margin box"/>
 
 
 横幅がMarginで入りきらなくなったため、押しつぶされてしまいましたが、このようにMarginもかけることが可能です。  
@@ -175,7 +175,7 @@ Aligmentを使って中央に表示してみます。
   ),
 ```
 
-<img src="/images/layout/detail/02/container_07.png" style="min-width:300px;max-width:600px;" alt="alignment center"/>
+<img src="/images/basic/layout/02/container_07.png" style="min-width:300px;max-width:600px;" alt="alignment center"/>
 
 Alignmentクラスには他にも以下のようなものがあります。
 
@@ -201,7 +201,7 @@ Alignmentクラスには他にも以下のようなものがあります。
   ),
 ```
 
-<img src="/images/layout/detail/02/container_08.png" style="min-width:300px;max-width:600px;" alt="transform center"/>
+<img src="/images/basic/layout/02/container_08.png" style="min-width:300px;max-width:600px;" alt="transform center"/>
 
 TransformはX,Y,Z軸の回転やサイズ(Scale)の変更、子要素の一の変更(translate)などができます。
 
