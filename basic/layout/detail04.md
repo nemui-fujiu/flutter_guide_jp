@@ -147,6 +147,35 @@ return MaterialApp(
 ``Expanded``はColumn、RowまたはFlexの子要素として利用でき、領域を最大限確保します。  
 この効果を使うことにより、要素を均等に並べることが可能になります。  
 
+さらにflexを指定することで、要素の幅を変更できます。
+
+```dart
+    return MaterialApp(
+      title: 'Expanded',
+      home: Container(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+                child:Container( color: Colors.blue)
+            ),
+            Expanded(
+              flex: 2,
+              child:Container( color: Colors.red),
+            ),
+            Expanded(
+              child:Container( color: Colors.green),
+            ),
+          ],
+        ),
+      ),
+    );
+```
+
+<img src="/images/basic/layout/04/expanded_02.png" style="min-width:300px;max-width:600px;" alt="Expanded flex"/>
+
+このように他の要素の2倍のサイズで赤い領域が確保されました。  
+flexの数値を変えることで、自由に設定が可能です。  
+
 ### CrossAxisAlignmentのStretch & Baseline
 
 CrossAxisAlignmentには他にStretchとBaselineと言う2つの要素があります。  
