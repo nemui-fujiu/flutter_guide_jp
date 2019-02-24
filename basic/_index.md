@@ -18,5 +18,7 @@ Flutterの基本を解説します。目次から学びたい単元を選んで�
   - [Container](layout/detail02) 
   - [Column & Row](layout/detail03) 
   - [AxisAlignment](layout/detail04) 
+  - [ListView](layout/listview) 
+  - [GridView](layout/gridview) 
   
 

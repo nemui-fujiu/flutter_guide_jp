@@ -3,7 +3,7 @@ title = "ListView"
 date = 2019-02-24T00:00:00+09:00
 draft = false
 weight = 315
-description = ""
+description = "ListViewは直線的に配置されたスクロール可能なウィジェットのリストです。一覧作成を行う場合は一番一般的なスクロールウィジェットとなります。 "
 +++
 
 ## ListView
@@ -262,6 +262,61 @@ class MyApp extends StatelessWidget {
 ```
 
 <img src="/images/basic/layout/05/listview_05.png" style="min-width:300px;max-width:600px;" alt="ListView.separated"/>
+
+
+### ScrollDirection
+
+``scrollDirection``を指定することによって、スクロールの方向を変えることも可能です。  
+デフォルトで``Axis.vertical``となっていますが、``Axis.horizontal``に変えてみましょう。  
+(表示するのが文言だとわかりづらいので、``_messageItem``を変更しています。)
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var list = ["0","1","2","3","4","5","6","7","8","9"];
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('ListView'),
+            ),
+            body: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                if (index >= list.length) {
+                  list.addAll(["0","1","2","3","4","5","6","7","8","9",]);
+                }
+                return _messageItem(list[index]);
+              },
+            )
+        )
+    );
+  }
+
+  Widget _messageItem(String title) {
+    return Container(
+      width: 100,
+      decoration: new BoxDecoration(
+          border: new Border(right: BorderSide(width: 1.0, color: Colors.grey))
+      ),
+      child:Center(
+        child:Text(
+          title,
+          style: TextStyle(
+              color:Colors.black,
+              fontSize: 20.0
+          ),
+        ),
+      )
+    );
+  }
+}
+```
+
+<img src="/images/basic/layout/05/listview_06.png" style="min-width:300px;max-width:600px;" alt="ListView.separated"/>
+
+
+これで横方向にスクロールするリストになりました。
 
 
 ## 参考

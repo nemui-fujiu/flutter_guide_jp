@@ -157,7 +157,7 @@ Paddingと同じく全周囲にかける場合は```EdgeInsets.all```特定の�
 ```dart
     margin: const EdgeInsets.only(left:50.0),
 ```
-<img src="/images/layout/detail/02/container_06.png" style="min-width:300px;max-width:600px;" alt="margin left box"/>
+<img src="/images/basic/layout/02/container_06.png" style="min-width:300px;max-width:600px;" alt="margin left box"/>
 
 
 ### 揃え
