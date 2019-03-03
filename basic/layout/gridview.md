@@ -3,7 +3,7 @@ title = "GridView"
 date = 2019-02-24T00:00:00+09:00
 draft = false
 weight = 316
-description = ""
+description = "GridViewは写真などのボックス状のレイアウトを配置しスクロールするのに便利なウィジェットです。 "
 +++
 
 ## GridView
@@ -197,6 +197,8 @@ body: GridView.builder(
 グリッド同士の間にスペースを作成したいときに指定するのが、``mainAxisSpacing``と``crossAxisSpacing``になります。  
 RowやColumnでも同じ考え方が出てきましたが、以下のようなイメージで利用します。
 
+このプロパティは、「GridView」クラスであれば上記で説明したどれでも利用できます。
+
 <img src="/images/basic/layout/06/gridview_05.svg" style="width:300px;" alt="GridView　AxisSpacing"/>
 
 このように並ぶ方向に対して、``mainAxisSpacing``と``crossAxisSpacing``が決まることに注意してください。  
@@ -239,6 +241,52 @@ body: GridView.builder(
 <img src="/images/basic/layout/06/gridview_07.png" style="min-width:300px;max-width:600px;" alt="GridView crossAxisSpacing"/>
 
 このように左右に対してスペースができます。
+
+### ChildAspectRatio
+
+今まで紹介したやり方だとGridのタテヨコ比は常に同じ割合となります。  
+そのため縦の長さを伸ばしたい場合は、``childAspectRatio``で比率を変えてあげます。  
+このプロパティは、「GridView」クラスであれば上記で説明したどれでも利用できます。
+
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var list = [
+      _photoItem("pic0"),
+      _photoItem("pic1"),
+      _photoItem("pic2"),
+      _photoItem("pic3"),
+      _photoItem("pic4"),
+      _photoItem("pic5"),
+    ];
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('GridView'),
+            ),
+            body: GridView.count(
+                crossAxisCount: 2,
+                childAspectRatio: 0.7,
+                children: list
+            )
+        )
+    );
+  }
+
+  Widget _photoItem(String image) {
+    var assetsImage = "assets/img/" + image + ".png";
+    return Container(
+      child: Image.asset(assetsImage, fit: BoxFit.cover,),
+    );
+  }
+}
+```
+
+<img src="/images/basic/layout/06/gridview_08.png" style="min-width:300px;max-width:600px;" alt="GridView ChildAspectRatio"/>
+
+
+
 
 ## 参考
 
