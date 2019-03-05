@@ -17,6 +17,28 @@ Flutterでのテキスト入力の方法と操作にはいくつかの方法が�
 「TextField」は文字列を入力するためのシンプルな入力フォームとなります。
 
 ```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Form',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Form'),
+        ),
+        body: Center(
+          child: ChangeForm(),
+        ),
+      ),
+    );
+  }
+}
+
+class ChangeForm extends StatefulWidget {
+  @override
+  _ChangeFormState createState() => _ChangeFormState();
+}
+
 class _ChangeFormState extends State<ChangeForm> {
 
   String _text = '';
