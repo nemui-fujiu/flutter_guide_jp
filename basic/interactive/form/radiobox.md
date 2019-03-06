@@ -3,7 +3,7 @@ title = "ラジオボタン"
 date = 2019-03-06T00:00:00+09:00
 draft = false
 weight = 326
-description = ""
+description = "ラジオはOnとOffの切り替えを行うことができます。 色の変更や、ListTileを使ったレイアウトなどがあるので、色々試してみてください。 "
 +++
 ## Radio
 
