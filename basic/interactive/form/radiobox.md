@@ -117,6 +117,6 @@ children: <Widget>[
 - ``subtitle``はラジオボタンのサブタイトル
 - ``secondary``はアイコンなどをつけたい場合に利用してください。
 - ``controlAffinity``ではラジオボタンの配置を変更できます。  
-``ListTileControlAffinity.leading``は先頭にチェックボックスを持ってきます。    
-``ListTileControlAffinity.trailing``は末尾にチェックボックスを持ってきます。  
-``ListTileControlAffinity.platform``は実行しているプラットフォームに対して一般的な配置にチェックボックスを持ってきます。  
+``ListTileControlAffinity.leading``は先頭にラジオボタンを持ってきます。    
+``ListTileControlAffinity.trailing``は末尾にラジオボタンを持ってきます。  
+``ListTileControlAffinity.platform``は実行しているプラットフォームに対して一般的な配置にラジオボタンを持ってきます。  
