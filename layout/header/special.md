@@ -18,7 +18,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 今回実現させたいのは以下のような透過ヘッダーです。  
 AppBarを透過させる事によりヘッダーを目立たなくさせ、全体の一体感を出しつつ、ヘッダーの機能を残すことができます。  
 
-<img src="http://flutter.ctrnost.com/images/layout/header/special/transparent.png" style="min-width:300px" alt="transparent header" />
+<img src="https://flutter.ctrnost.com/images/layout/header/special/transparent.png" style="min-width:300px" alt="transparent header" />
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -88,7 +88,7 @@ Stackについては別で記事を用意しますが、簡単に説明すると
 完全に透過ではなく、ある程度色を残すことでアプリ全体の一体感をつけたり、ヘッダーをはっきりさせることで操作対象をわかりやすくしています。  
 
 
-<img src="http://flutter.ctrnost.com/images/layout/header/special/with_opacity.png" style="min-width:300px" alt="with opacity header" />
+<img src="https://flutter.ctrnost.com/images/layout/header/special/with_opacity.png" style="min-width:300px" alt="with opacity header" />
 
 上記「透過ヘッダー」のAppBarにある「backgroundColor」を以下のように変更すると半透明なヘッダーが作成可能です。
 

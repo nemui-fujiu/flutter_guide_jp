@@ -36,7 +36,7 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,基礎"
     }
     ```
     起動するとこんな感じになるかと思います。
-    <img src="http://flutter.ctrnost.com/images/tutorial/03/01_base.png" width="600px"  alt="Base Program">
+    <img src="https://flutter.ctrnost.com/images/tutorial/03/01_base.png" width="600px"  alt="Base Program">
 2. 解説
     1. mainメソッドの箇所に書かれている「=>」はワンライナーで書くときの記述方式です。
     通常の書き方だと以下のようになります。

@@ -7,7 +7,7 @@ description = "ヘッダーレイアウトの見た目とコードを複数紹�
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar"
 +++
 
-<img src="http://flutter.ctrnost.com/images/layout/header/header_layout.svg" width="90%" alt="header layout">
+<img src="https://flutter.ctrnost.com/images/layout/header/header_layout.svg" width="90%" alt="header layout">
 
 ヘッダーレイアウトの見た目とコードを複数紹介します。以下目次から利用したいヘッダーを探して参考にしてください。
 

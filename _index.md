@@ -6,7 +6,7 @@ description = "日本におけるFlutterでのアプリ開発が広く利用さ�
 keywords = "Flutter,アプリ,日本語,レイアウト,入門"
 +++
 
-<img src="http://flutter.ctrnost.com/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
+<img src="https://flutter.ctrnost.com/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
 
 # Flutter Guide JP
 

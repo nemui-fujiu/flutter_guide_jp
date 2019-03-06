@@ -63,5 +63,5 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
 5. 変更したらソースを保存してみてください。
 ホットリロードのタイミングで表示される単語が変わるようになったかと思います。
 これは、buildメソッド内で「MaterialApp」がレンダリングが必要になるたびに、生成されているためです。
-<img src="http://flutter.ctrnost.com/images/tutorial/04/01_english_words.png" width="600px"  alt="English Words">
+<img src="https://flutter.ctrnost.com/images/tutorial/04/01_english_words.png" width="600px"  alt="English Words">
 
