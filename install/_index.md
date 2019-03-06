@@ -115,7 +115,6 @@ $ fluttter doctor
 
 実機インストールについてはまた別の手順が必要なため、改めて設定してください。
 
----
 ## 参考
 
 [Flutter Install](https://flutter.io/docs/get-started/install)

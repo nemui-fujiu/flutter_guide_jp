@@ -65,8 +65,7 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,基礎"
     [Layout](https://flutter.io/docs/development/ui/layout)  
 
 
----
 
-参考
+## 参考
 
 [Write Your First Flutter App, part1](https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/index.html?index=..%2F..index#0)

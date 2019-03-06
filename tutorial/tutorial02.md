@@ -21,8 +21,9 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,動作確認
 ホットリロードとは、アプリを再起動せず、修正を反映させる機能のことを言います。
 Flutterはデフォルトでホットリロードが有効になっているので、ソースの変更を保存するとエミュレータですぐに確認することが可能です。
 
-1. ```lib/main.dart```を開いてください。
+1. ``lib/main.dart``を開いてください。
 2. 以下部分を編集します。
+
     ```dart
     Text(
       'You have pushed the button this many times:',
@@ -34,6 +35,7 @@ Flutterはデフォルトでホットリロードが有効になっているの�
       'ボタンを押した回数:',
     ),
     ```
+    
 3. ソースを保存するとエミュレータの文字列が書き換わったのがわかると思います。   
 Before:   
 <img src="https://flutter.ctrnost.com/images/tutorial/02/03_before.png" width="400px" alt="before">   

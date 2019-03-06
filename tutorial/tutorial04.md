@@ -11,7 +11,7 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
 
 外部パッケージの取り込み方を覚えて、便利な外部パッケージを使いこなしましょう！
 
-1. 次に外部パッケージの取り込み方法を学びましょう。```/pubspec.yaml```で依存関係を管理するので、以下のように編集します。   
+1. 次に外部パッケージの取り込み方法を学びましょう。``/pubspec.yaml``で依存関係を管理するので、以下のように編集します。   
 
     ```yaml
       dependencies:
@@ -21,13 +21,13 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
          english_words: ^3.1.0
     ```
 
-    今回取り込むのは```english_words```というパッケージです。
+    今回取り込むのは``english_words``というパッケージです。
     このパッケージはランダムに英単語を生成するためのライブラリで、デモやテストなどランダムに文字列を取得したいときに利用します。   
     [english_words](https://pub.dartlang.org/packages/english_words)
     
     Flutterで使える外部パッケージは[Flutter Paclages](https://pub.dartlang.org/flutter)で手に入るので、何か作るときは一度パッケージがないか探してみるといいと思います。
 
-2. 通常は```/pubspec.yaml```に変更を加え保存すると同時にパッケージがダウンロードされます。
+2. 通常は``/pubspec.yaml``に変更を加え保存すると同時にパッケージがダウンロードされます。
 もしダウンロードされない場合は直接以下コマンドを叩いてパッケージを取得してください。
     ```bash
     $ flutter packages get
