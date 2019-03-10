@@ -6,6 +6,7 @@ weight = 315
 description = "ListViewは直線的に配置されたスクロール可能なウィジェットのリストです。一覧作成を行う場合は一番一般的なスクロールウィジェットとなります。 "
 +++
 
+<span id="list_view"></span>
 ## ListView
 
 ListViewは直線的に配置されたスクロール可能なウィジェットのリストです。
@@ -110,6 +111,9 @@ class MyApp extends StatelessWidget {
 
 このように事前にウィジャット一覧を作成することでメニュー一覧を作ることができました。  
 ですが、もう少し簡単な方法もあります。   
+
+<span id="list_tile"></span>
+#### ListTile
 ``_menuItem``を以下のように書き換えてみましょう。  
 
 ```dart

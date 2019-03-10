@@ -149,6 +149,7 @@ OutlineButton(
 
 必須ではないですが、``borderSide``に色を指定して枠線が見えるようにすると、アウトライン表示されたボタンになります。
 
+<span id="icon_button"></span>
 ### IconButton
 
 「IconButton」はアイコンをボタンにするときに利用します。
@@ -210,6 +211,7 @@ FloatingActionButton.extended(
 ```
 <img src="/images/basic/interactive/02/button_05_02.png" style="min-width:300px;max-width:600px;" alt="FloatingActionButton.extended"/>
 
+<span id="popup_menu_button"></span>
 ### PopupMenuButton
 
 「PopupMenuButton」は、メニューボタンを作成することができます。

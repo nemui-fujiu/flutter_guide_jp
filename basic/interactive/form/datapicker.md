@@ -47,10 +47,10 @@ class _ChangeFormState extends State<ChangeForm> {
 <img src="/images/basic/interactive/02/datepicker_01.gif" style="min-width:300px;max-width:600px;" alt="DatePicker"/>
 
 
-``context``には、モーダル表示のために``BuildContext``を渡してください。
-``initialDate``は、最初に表示する初期の日付になります。
-``firstDate``は、表示できる最小日付です。
-``lastDate``は、表示できる最大日付です。
+- ``context``には、モーダル表示のために``BuildContext``を渡してください。
+- ``initialDate``は、最初に表示する初期の日付になります。
+- ``firstDate``は、表示できる最小日付です。
+- ``lastDate``は、表示できる最大日付です。
 
 ``initialDate``は``firstDate``から``lastDate``の範囲内の日付である必要があるので注意してください。
 
@@ -87,5 +87,5 @@ class _ChangeFormState extends State<ChangeForm> {
 
 <img src="/images/basic/interactive/02/datetimepicker_01.gif" style="min-width:300px;max-width:600px;" alt="DateTimePicker"/>
 
-``context``には、モーダル表示のために``BuildContext``を渡してください。
-``initialDate``は、最初に表示する初期の時刻になります。
+- ``context``には、モーダル表示のために``BuildContext``を渡してください。
+- ``initialDate``は、最初に表示する初期の時刻になります。

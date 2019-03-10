@@ -192,6 +192,7 @@ body: GridView.builder(
 
 このようにスクロールする方向が変わったのがわかると思います。
 
+<span id="axis_spacing"></span>
 ### AxisSpacing
 
 グリッド同士の間にスペースを作成したいときに指定するのが、``mainAxisSpacing``と``crossAxisSpacing``になります。  
