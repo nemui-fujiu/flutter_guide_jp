@@ -14,15 +14,24 @@ Flutterの基本を解説します。目次から学びたい単元を選んで�
 ## 目次
 
 - レイアウト
-  - [レイアウト概要](layout/detail01) 
-  - [Container](layout/detail02) 
-  - [Column & Row](layout/detail03) 
-  - [AxisAlignment](layout/detail04) 
+  - [レイアウト概要](layout/layout) 
+  - [Container](layout/container) 
+  - [Column & Row](layout/columnrow) 
+  - [AxisAlignment](layout/axisalignment) 
   - [ListView](layout/listview) 
   - [GridView](layout/gridview) 
+  - [Stack](layout/stack) 
+  - [Card](layout/card) 
 - インタラクティブ
   - [Statefull](interactive/stateful)
   - [Form Button](interactive/form/button)
   - [Form TextField](interactive/form/textfield) 
+- ナビゲーション
+  - [AppBar](navigation/appbar)
+  - [BottomNavigationBar](navigation/bottomnavigationbar)
+  - [TabBar](navigation/tabbar)
+  - [SliverAppBar](navigation/sliverappbar)
+  - [Drawer](navigation/drawer)
+
   
 

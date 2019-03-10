@@ -18,6 +18,9 @@ keywords = "Flutter,アプリ,日本語,レイアウト,入門"
 - [チュートリアル](/tutorial/)
 - [概要](/basic/)
   - [Flutterの基本](/basic/)
+        - [レイアウト](/basic/layout)
+        - [インタラクション](/basic/interactive)
+        - [ナビゲーション](/basic/navigation)
 - [レイアウトサンプル](/layout/)
   - [Header](/layout/header/)
         - [通常](/layout/header/standard)
@@ -27,14 +30,6 @@ keywords = "Flutter,アプリ,日本語,レイアウト,入門"
         - [リストレイアウト](/layout/body/list)
         - [グリッドレイアウト](/layout/body/grid)
   - Footer
-
-- 遷移
-
-- アニメーション
-
-- データ
-  - DB
-  - API
 
 - [設定](/settings)
 
