@@ -167,6 +167,7 @@ IconButton(
 
 このようにアイコンボタンを作成できます。
 
+<span id="floaging_action_button"></span>
 ### FloatingActionButton
 
 「FloatingActionButton」はGmailアプリなどで見るような丸ボタンを簡単に作れます。 
