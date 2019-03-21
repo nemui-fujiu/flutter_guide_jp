@@ -14,6 +14,7 @@ description = "「AnimatedContainer」は指定した期間に対して徐々に
 コンテナに備わっている値を変えるだけで様々なアニメーションを作れるのでとても便利なウィジェットです。
 実際のアニメーションを作る前に押さえておきたい2つのことに関して先に説明します。
 
+<span id="duration"></span>
 ### Duration
 
 「AnimatedContainer」には時間を制御する``duration``が設定できます。  
@@ -82,7 +83,7 @@ class _MainPageState extends State<MainPage> {
 
 ``floatingActionButton``については[こちら](/basic/interacitve/form/button#floaging_action_button)
 
-
+<span id="size"></span>
 ### サイズの変更
 
 サイズの変更は以下のように行います。
@@ -120,6 +121,7 @@ class _MainPageState extends State<MainPage> {
 画面右下の「FloatingActionButton」を押すと、``_onTap``が動作し、横幅を100から200へ変更しています。   
 これは高さでも同じで、高さの数値を動的に変更することでアニメーションさせることが可能です。  
 
+<span id="alignment"></span>
 ### 配置の変更
 
 配置の変更は以下のように行います。
@@ -159,7 +161,7 @@ class _MainPageState extends State<MainPage> {
 「AnimatedContainer」の``alignment``を動的に変更することで、「AnimatedContainer」内のウィジェットの配置を変えるアニメーションを作成できます。 
 画面右下の「FloatingActionButton」を押すと、``_onTap``が動作し、子要素を``Alignment.topLeft``から``Alignment.topRight``へ変更しています。   
 
-
+<span id="padding"></span>
 ### Padding
 
 Paddingの変更は以下のように行います。

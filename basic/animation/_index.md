@@ -12,3 +12,4 @@ description = "アニメーションをするのに必要なウィジェット�
 ## 目次
 
 - [AnimatedContainer](animatedcontainer) 
+- [ImplicitlyAnimatedWidget](implicitlyanimated) 
