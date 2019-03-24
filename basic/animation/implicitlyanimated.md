@@ -2,7 +2,7 @@
 title = "アニメーション(ImplicitlyAnimatedWidget)"
 date = 2019-03-20T00:00:00+09:00
 draft = false
-weight = 362
+weight = 372
 description = "今回はアニメーション(ImplicitlyAnimatedWidget)について解説していきます。 アニメーションを作成する方法として、AnimatedAlignなど色々と簡単に作成できる方法をご紹介します。"
 +++
 
@@ -10,6 +10,9 @@ description = "今回はアニメーション(ImplicitlyAnimatedWidget)につい
 
 今回はアニメーション(ImplicitlyAnimatedWidget)について解説していきます。  
 アニメーションを作成する方法として、[AnimatedContainer](/basic/animation/animatedcontainer)を使った方法もあるのですが、他にも色々と簡単に作成できる方法が提供されています。  
+AnimatedContainerの解説は[こちら](/basic/animation/animatedcontainer)   
+
+ImplicitlyAnimatedWidgetクラスを継承しているとAnimateControllerなどのような複雑な制御をせずにアニメーションを作成できます。  
 
 - [AnimatedAlign](#animated_align)
 - [AnimatedPadding](#animated_padding)

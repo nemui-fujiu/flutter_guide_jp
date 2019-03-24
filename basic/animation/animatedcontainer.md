@@ -2,7 +2,7 @@
 title = "AnimatedContainer"
 date = 2019-03-14T00:00:00+09:00
 draft = false
-weight = 361
+weight = 371
 description = "「AnimatedContainer」は指定した期間に対して徐々に値を変更するコンテナです。対象の値を変更した時に自動で、そのプロパティの新旧の値間でアニメーションをしてくれます。"
 +++
 

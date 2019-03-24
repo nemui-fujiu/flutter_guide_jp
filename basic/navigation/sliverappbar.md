@@ -8,8 +8,8 @@ description = "「SliverAppBar」はスクロールに応じてヘッダー要�
 ## SliverAppBar
 
 「SliverAppBar」はスクロールに応じてヘッダー要素を隠すことができるようになるウィジェットです。  
-「SliverAppBar」の一覧要素には、大きく分けてリストとグリッドの2種類あるのでそれぞれ説明していきます。
-最初には「SliverFixedExtentList」についての解説をしていきます。
+「SliverAppBar」の一覧要素には、大きく分けてリストとグリッドの2種類あるのでそれぞれ説明していきます。   
+最初に「SliverFixedExtentList」についての解説をしていきます。
 
 ### SliverFixedExtentList
 
