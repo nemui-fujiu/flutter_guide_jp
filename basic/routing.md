@@ -304,7 +304,7 @@ class SubPage extends StatelessWidget {
 
 ##  画面遷移(Navigator.pushNamedAndRemoveUntil)
 
-``pushNamedAndRemoveUntil``は第2引数で指定した画面まで画面をポップして、第2引数の画面をプッシュします。
+``pushNamedAndRemoveUntil``は第2引数で指定した画面まで画面をポップして、第1引数の画面をプッシュします。
 
 ```dart
 class SubPage extends StatelessWidget {
@@ -355,7 +355,9 @@ class SubPage extends StatelessWidget {
 }
 ```
 
-初期画面(スプラッシュやホーム)に戻す時に便利です。
+動作としてはHome画面を含めてポップし続けて、最後にSub１をプッシュしています。
+そのため、Sub1で戻るを押してポップすると、画面がなくなり真っ暗になります。
+
 ``(_) => false``とすることで、画面を新規にプッシュせずに終わることができるので、初期画面(スプラッシュやホーム)に戻す時に便利です。
 
 ```dart
