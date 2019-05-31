@@ -23,7 +23,7 @@ description = "「AnimatedContainer」は指定した期間に対して徐々に
 
 
 「Duration」は以下のように、日付から~マイクロ秒までを設定できます。
-```dart
+{{< highlight dart>}}
   const Duration(
       {int days: 0,
       int hours: 0,
@@ -31,7 +31,7 @@ description = "「AnimatedContainer」は指定した期間に対して徐々に
       int seconds: 0,
       int milliseconds: 0,
       int microseconds: 0})
-```
+{{< /highlight >}}
 
 ### Curve
 
@@ -50,7 +50,7 @@ description = "「AnimatedContainer」は指定した期間に対して徐々に
 
 色の変更は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Color _color = Colors.blue[100];
@@ -72,11 +72,11 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/color.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer color"/>
 
-- ```color```は色を設定します。
+- ``color``は色を設定します。
 
 「AnimatedContainer」の``color``を動的に変更することで、色が変化するアニメーションを作成できます。  
 画面右下の「FloatingActionButton」を押すと、``_onTap``が動作し、色を100から900へ変更しています。  
@@ -88,7 +88,7 @@ class _MainPageState extends State<MainPage> {
 
 サイズの変更は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _width = 100;
@@ -110,7 +110,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/width.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer width"/>
 
@@ -126,7 +126,7 @@ class _MainPageState extends State<MainPage> {
 
 配置の変更は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Alignment _alg = Alignment.topLeft;
@@ -152,7 +152,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/alignment.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer alignment"/>
 
@@ -166,7 +166,7 @@ class _MainPageState extends State<MainPage> {
 
 Paddingの変更は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _padding = 20;
@@ -194,7 +194,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/padding.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer Padding"/>
 
@@ -208,7 +208,7 @@ class _MainPageState extends State<MainPage> {
 
 Marginの変更は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _margin = 20;
@@ -231,7 +231,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/margin.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer Margin"/>
 
@@ -245,7 +245,7 @@ class _MainPageState extends State<MainPage> {
 
 回転は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _radians = 0;
@@ -270,7 +270,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/rotation01.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer transform　rotation"/>
 
@@ -293,7 +293,7 @@ class _MainPageState extends State<MainPage> {
 
 移動は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _p = 0;
@@ -316,7 +316,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/translation.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer transform　translation"/>
 
@@ -331,7 +331,7 @@ class _MainPageState extends State<MainPage> {
 
 拡大縮小は以下のように行います。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _p = 1;
@@ -354,7 +354,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/01/scale.gif" style="min-width:300px;max-width:600px;" alt="AnimatedContainer transform　scale"/>
 

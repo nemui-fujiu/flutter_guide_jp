@@ -24,17 +24,17 @@ Flutterはデフォルトでホットリロードが有効になっているの�
 1. ``lib/main.dart``を開いてください。
 2. 以下部分を編集します。
 
-    ```dart
+    {{< highlight dart >}}
     Text(
       'You have pushed the button this many times:',
     ),
-    ```
+    {{< /highlight >}}
     ↓
-    ```dart
+    {{< highlight dart >}}
     Text(
       'ボタンを押した回数:',
     ),
-    ```
+    {{< /highlight >}}
     
 3. ソースを保存するとエミュレータの文字列が書き換わったのがわかると思います。   
 Before:   

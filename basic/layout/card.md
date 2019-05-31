@@ -11,7 +11,7 @@ description = "Cardはマテリアルデザインを適応したウィジェッ�
 ``Card``はマテリアルデザインを適応したウィジェットを作成するのに利用します。   
 他のレイアウトと合わせて綺麗なレイアウトを作ることができます。
 
-```dart
+{{< highlight dart>}}
 body: Card(
   margin: const EdgeInsets.all(50.0),
   child: Container(
@@ -24,7 +24,7 @@ body: Card(
     )
   ),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/08/card_01.png" style="min-width:300px;max-width:600px;" alt="Card"/>
 

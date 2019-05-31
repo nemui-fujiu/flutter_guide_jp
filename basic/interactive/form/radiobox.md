@@ -14,7 +14,7 @@ description = "ラジオはOnとOffの切り替えを行うことができます
 
 「Radio」はWebページでおなじみのラジオボタンと同じものを作成することができます。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   String _type = '';
@@ -65,7 +65,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 <img src="/images/basic/interactive/02/radio_01.gif" style="min-width:300px;max-width:600px;" alt="Radio"/>
 
 - ``value``はラジオボタンの値です。
@@ -77,7 +77,7 @@ class _ChangeFormState extends State<ChangeForm> {
 
 「RadioListTile」は「ListTile」の一種で、標準的なレイアウトを提供してくれます。
 
-```dart
+{{< highlight dart>}}
 children: <Widget>[
   Center(
     child: new Icon(
@@ -107,7 +107,7 @@ children: <Widget>[
     onChanged: _handleRadio,
   ),
 ],
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/radio_02.gif" style="min-width:300px;max-width:600px;" alt="RadioListTile"/>
 

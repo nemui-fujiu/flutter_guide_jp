@@ -15,16 +15,16 @@ keywords = "Flutter,アプリ,日本語,Settings,設定,pubspec.yml,yaml"
 画像の読み込みをしたい場合はassetsの定義が必要です。   
 ``pubspec.yml``にassetsを設定するとImage.assetで読み込めるようになります。
 
-```yaml
+{{< highlight yaml >}}
 flutter:
   assets:
   - assets/logo.png
-```
+{{< /highlight >}}
 
-```dart
+{{< highlight dart>}}
 Image.asset(
     'assets/logo.png',
     fit: BoxFit.contain,
     height: 32,
 ),
-```
+{{< /highlight >}}

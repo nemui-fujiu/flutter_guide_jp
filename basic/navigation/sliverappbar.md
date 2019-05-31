@@ -13,7 +13,7 @@ description = "「SliverAppBar」はスクロールに応じてヘッダー要�
 
 ### SliverFixedExtentList
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/navigation/04/sliverappbar_01.gif" style="min-width:300px;max-width:600px;" alt="SliverAppBar SliverFixedExtentList"/>
 
@@ -63,21 +63,21 @@ class _MainPageState extends State<MainPage> {
 「SliverAppBar」はこのように「CustomScrollView」の子要素として作成します。  
 「CustomScrollView」のスクロール動作に対して、「SliverAppBar」のヘッダー要素が隠れるようになります。
 
-```dart
+{{< highlight dart>}}
 body: CustomScrollView(
   slivers: <Widget>[
     const SliverAppBar(
     ),
   ]
 ),
-```
+{{< /highlight >}}
 
 次に表示するリストを作成します。  
 ``itemExtent``が行の高さになり、リストの内容は``delegate``にて行になる要素を作成してください。  
 今回は「SliverChildBuilderDelegate」を使うことで、表示している範囲のみ要素を生成するようにします。  
 ``delegate``にはスクロール時に現在の行番号(``index``)を受け取ることができます。  
 
-```dart
+{{< highlight dart>}}
 SliverFixedExtentList(
   itemExtent: 200.0,
   delegate: SliverChildBuilderDelegate(
@@ -90,12 +90,12 @@ SliverFixedExtentList(
     },
   ),
 ),
-```
+{{< /highlight >}}
 
 「SliverChildBuilderDelegate」は``childCount``を指定することで、表示件数を制限することも可能です。  
 ``childCount``を指定しない場合は、スクロールに応じて無限にコンテンツを構築しようとするので、動的に内容を制御している場合は、表示したいコンテンツが足りなくなる可能性があるので注意してください。
 
-```dart
+{{< highlight dart>}}
 delegate: SliverChildBuilderDelegate(
     (BuildContext context, int index) {
     return Container(
@@ -106,7 +106,7 @@ delegate: SliverChildBuilderDelegate(
   },
   childCount: 10,
 ),
-```
+{{< /highlight >}}
 
 これにより、ヘッダーがスクロールで表示、非表示される「SliverAppBar」が完成です。
 
@@ -115,7 +115,7 @@ delegate: SliverChildBuilderDelegate(
 
 次に「SliverGrid」による、グリッド一覧の作り方もみてみましょう。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Widget build(BuildContext context) {
@@ -157,7 +157,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/navigation/04/sliverappbar_02.gif" style="min-width:300px;max-width:600px;" alt="SliverAppBar SliverGrid"/>
 

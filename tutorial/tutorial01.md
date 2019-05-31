@@ -13,15 +13,19 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,AndroidStudi
 
 ## Android Studio / IntelliJ
 
-1. Android Stuidioを起動して**[Start a new Flutter project]**を選択してください。
-<img src="https://flutter.ctrnost.com/images/tutorial/01/01_start.jpg" width="500px" alt="create project">
-2. 次に**[Flutter Application]**を選択してください。
-<img src="https://flutter.ctrnost.com/images/tutorial/01/02_select_app_type.png" width="500px" alt="settings">
+1. Android Stuidioを起動して**[Start a new Flutter project]**を選択してください。  
+
+<img src="https://flutter.ctrnost.com/images/tutorial/01/01_start.jpg" width="500px" alt="create project">  
+2. 次に**[Flutter Application]**を選択してください。  
+
+<img src="https://flutter.ctrnost.com/images/tutorial/01/02_select_app_type.png" width="500px" alt="settings">  
 3. 新規作成するFlutterアプリケーションの設定を確認して、プロジェクト名や作成先のパスなどを設定してください。
 また、Flutter SDK Pathが正しいことを確認してください。
-<img src="https://flutter.ctrnost.com/images/tutorial/01/03_create_app.png" width="500px" alt="input domain">
+
+<img src="https://flutter.ctrnost.com/images/tutorial/01/03_create_app.png" width="500px" alt="input domain">  
 4. ドメインを記入して、**[Platform channel language]**を選択して**[Finish]**を押すとアプリが作成されます。
-<img src="https://flutter.ctrnost.com/images/tutorial/01/04_package.png" width="500px" alt="input package">
+
+<img src="https://flutter.ctrnost.com/images/tutorial/01/04_package.png" width="500px" alt="input package">  
 
 
 

@@ -5,6 +5,7 @@ draft = false
 weight = 410
 description = "ヘッダーレイアウトの見た目とコードを複数紹介します。以下目次から利用したいヘッダーを探して参考にしてください。"
 keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,AppBar"
+featured_images = "/images/layout/header/header_layout.svg"
 +++
 
 <img src="https://flutter.ctrnost.com/images/layout/header/header_layout.svg" width="90%" alt="header layout">

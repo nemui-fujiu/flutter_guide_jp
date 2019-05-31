@@ -15,7 +15,7 @@ description = "ボタンには色々な種類があり、それぞれ特徴が�
 
 「FlatButton」は一番シンプルなボタンになります。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -76,14 +76,14 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_01.gif" style="min-width:300px;max-width:600px;" alt="FlatButton"/>
 
 今回の例ではボタンをクリックするとカウントアップするようにしています。   
 ``onPressed``でクリック時の処理を実装しています。
 
-```dart
+{{< highlight dart>}}
 FlatButton(
   onPressed: _handlePressed,
   color: Colors.blue,
@@ -98,7 +98,7 @@ FlatButton(
     ),
   ),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/shape_01.png" style="min-width:300px;max-width:600px;" alt="FlatButton Radius"/>
 
@@ -110,7 +110,7 @@ FlatButton(
 
 「RaiseButton」ボタンは立体的なボタンを作成したいときに利用します。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(
   onPressed: _handlePressed,
   color: Colors.blue,
@@ -121,7 +121,7 @@ RaisedButton(
         fontSize: 20.0
     ),),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_02.gif" style="min-width:300px;max-width:600px;" alt="RaisedButton"/>
 
@@ -131,7 +131,7 @@ RaisedButton(
 
 「RaiseButton」は外側に枠線が付いているボタンになります。
 
-```dart
+{{< highlight dart>}}
 OutlineButton(
   onPressed: _handlePressed,
   borderSide: BorderSide(color: Colors.blue),
@@ -143,7 +143,7 @@ OutlineButton(
     ),
   ),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_03.gif" style="min-width:300px;max-width:600px;" alt="OutlineButton"/>
 
@@ -154,14 +154,14 @@ OutlineButton(
 
 「IconButton」はアイコンをボタンにするときに利用します。
 
-```dart
+{{< highlight dart>}}
 IconButton(
   iconSize: 100,
   onPressed: _handlePressed,
   color: Colors.blue,
   icon: Icon(Icons.add_circle_outline),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_04.gif" style="min-width:300px;max-width:600px;" alt="IconButton"/>
 
@@ -172,19 +172,19 @@ IconButton(
 
 「FloatingActionButton」はGmailアプリなどで見るような丸ボタンを簡単に作れます。 
 
-```dart
+{{< highlight dart>}}
 FloatingActionButton(
   onPressed: _handlePressed,
   backgroundColor: Colors.blue,
   child: Icon(Icons.add)
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_05.gif" style="min-width:300px;max-width:600px;" alt="FloatingActionButton"/>
 
 ``child``には文字の設定もできるので、このような表現も可能です。
 
-```dart
+{{< highlight dart>}}
 FloatingActionButton(
   onPressed: _handlePressed,
   backgroundColor: Colors.blue,
@@ -196,20 +196,20 @@ FloatingActionButton(
     ),
   ),
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_05_01.png" style="min-width:300px;max-width:600px;" alt="FloatingActionButton"/>
 
 このままだと不恰好なので、もう少し「FloatingActionButton」を横長にしたいという場合は、``FloatingActionButton.extended``を使ってください。
 
-```dart
+{{< highlight dart>}}
 FloatingActionButton.extended(
   onPressed: _handlePressed,
   backgroundColor: Colors.blue,
   icon: Icon(Icons.add),
   label: const Text('ボタン'),
 )
-```
+{{< /highlight >}}
 <img src="/images/basic/interactive/02/button_05_02.png" style="min-width:300px;max-width:600px;" alt="FloatingActionButton.extended"/>
 
 <span id="popup_menu_button"></span>
@@ -217,7 +217,7 @@ FloatingActionButton.extended(
 
 「PopupMenuButton」は、メニューボタンを作成することができます。
 
-```dart
+{{< highlight dart>}}
 PopupMenuButton<String>(
   onSelected: _handleChange,
   itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
@@ -239,7 +239,7 @@ PopupMenuButton<String>(
     ),
   ],
 ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_07.gif" style="min-width:300px;max-width:600px;" alt="PopupMenuButton"/>
 
@@ -251,7 +251,7 @@ PopupMenuButton<String>(
 
 「DropdownButton」はリストを表示することができるボタンになります。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   String _defaultValue = 'りんご';
@@ -293,7 +293,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/button_06.gif" style="min-width:300px;max-width:600px;" alt="DropdownButton"/>
 
@@ -301,8 +301,6 @@ class _ChangeFormState extends State<ChangeForm> {
 
 
 ## 参考
-
----
 
 [FlatButton](https://docs.flutter.io/flutter/material/FlatButton-class.html)  
 [RaisedButton](https://docs.flutter.io/flutter/material/RaisedButton-class.html)  

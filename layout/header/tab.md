@@ -18,7 +18,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 <img src="https://flutter.ctrnost.com/images/layout/header/tab/tab_header.png" style="min-width:300px" alt="tab header" />
 
 
-```dart
+{{< highlight dart>}}
 import 'package:flutter/material.dart';
 
 void main() => runApp(TabbedAppBarSample());
@@ -91,7 +91,7 @@ class ChoiceCard extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <span id="tab_no_icon_header"></span>
 ## タブ(アイコンなし)
@@ -104,7 +104,7 @@ class ChoiceCard extends StatelessWidget {
 
 以下のようにTabの引数からIconを抜けばOKです。
 
-```dart
+{{< highlight dart>}}
   appBar: AppBar(
     title: const Text('Tabbed AppBar'),
     bottom: TabBar(
@@ -115,7 +115,7 @@ class ChoiceCard extends StatelessWidget {
       }).toList(),
     ),
   ),
-```
+{{< /highlight >}}
 
 <span id="tab_scroll_header"></span>
 ## スクロールタブ
@@ -127,7 +127,7 @@ class ChoiceCard extends StatelessWidget {
 <img src="https://flutter.ctrnost.com/images/layout/header/tab/scroll_tab_header.png" style="min-width:300px" alt="scroll tab header" />
 
 1. TabbedAppBarSampleクラスのTabBarに``isScrollable: true``を追加
-    ```dart
+    {{< highlight dart>}}
     appBar: AppBar(
       title: const Text('Tabbed AppBar'),
       bottom: TabBar(
@@ -140,10 +140,10 @@ class ChoiceCard extends StatelessWidget {
         }).toList(),
       ),
     ),
-    ```
+    {{< /highlight >}}
 
 2. 表示が3つだとわかりづらいので表示するタブ数を増やして完了
-    ```dart
+    {{< highlight dart>}}
     const List<Choice> choices = const <Choice>[
       const Choice(title: 'CAR', icon: Icons.directions_car),
       const Choice(title: 'BICYCLE', icon: Icons.directions_bike),
@@ -152,4 +152,4 @@ class ChoiceCard extends StatelessWidget {
       const Choice(title: 'TRAIN', icon: Icons.directions_railway),
       const Choice(title: 'WALK', icon: Icons.directions_walk),
     ];
-    ```
+    {{< /highlight >}}

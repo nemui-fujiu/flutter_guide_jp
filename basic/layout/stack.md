@@ -11,7 +11,7 @@ description = "Stackはウィジェットを重ねることができるウィジ
 Stackはウィジェットを重ねることができるウィジェットです。  
 テキストと画像、ボタンを重ねるなど、ウィジェットを複数重ねた複雑なレイアウトを簡単に作ることも可能です。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/07/stack_01.png" style="min-width:300px;max-width:600px;" alt="Stack"/>
 
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 
 ``Positioned``を使うことでウィジェットを好きなところに配置することが可能です。
 
-```dart
+{{< highlight dart >}}
   children: <Widget>[
     Positioned(
       left: 20.0,
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
       child: Container(color: Colors.orange,),
     ),
   ],
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/07/stack_02.png" style="min-width:300px;max-width:600px;" alt="Stack Positioned"/>
 
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
 
 ### Aligment
 
-```dart
+{{< highlight dart >}}
 body: Stack(
   alignment: Alignment.bottomRight,
   children: <Widget>[
@@ -113,7 +113,7 @@ body: Stack(
     Text('Test')
   ],
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/07/stack_03.png" style="min-width:300px;max-width:600px;" alt="Stack Alignment"/>
 

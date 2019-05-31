@@ -12,8 +12,8 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,基礎"
 もっとアプリを作っている感じを出していきましょう。
 アプリの基礎を学ぶため、まずはベースとなるアプリを作ってみましょう！
 
-1. 最初に```lib/main.dart```を以下のように書き換えましょう。
-    ```dart
+1. 最初に``lib/main.dart``を以下のように書き換えましょう。
+    {{< highlight dart >}}
     import 'package:flutter/material.dart';
     
     void main() => runApp(MyApp()); /*1*/
@@ -34,18 +34,18 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,基礎"
         );
       }
     }
-    ```
+    {{< /highlight >}}
     起動するとこんな感じになるかと思います。
     <img src="https://flutter.ctrnost.com/images/tutorial/03/01_base.png" width="600px"  alt="Base Program">
 2. 解説
     1. mainメソッドの箇所に書かれている「=>」はワンライナーで書くときの記述方式です。
     通常の書き方だと以下のようになります。
     
-        ```dart
+        {{< highlight dart >}}
         void main()  {
           runApp(MyApp());
         } 
-        ```
+        {{< /highlight >}}
     2. 「StatelessWidget」を継承することでアプリ自体がWidgetになります。  
     Flutterでは、配置やパディング、レイアウトに関するほとんどすべてがウィジェットでできています。    
     [Widget](https://docs.flutter.io/flutter/widgets/Widget-class.html)  

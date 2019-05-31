@@ -14,7 +14,7 @@ keywords = "Flutter,アプリ,日本語,インストール,install,ヘッダー,
 
 <img src="https://flutter.ctrnost.com/images/layout/header/standard/normal_header.png" style="min-width:300px" alt="normal header" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-```
+{{< /highlight >}}
 
 <span id="icon_header"></span>
 ## アイコン
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
 
 <img src="https://flutter.ctrnost.com/images/layout/header/standard/icon_header.png" style="min-width:300px" alt="icon header" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <span id="popup_header"></span>
 ## ポップアップメニュー
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
 
 <img src="https://flutter.ctrnost.com/images/layout/header/standard/popup_header.png" style="min-width:300px" alt="popup header" />
 
-```dart
+{{< highlight dart>}}
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -120,7 +120,7 @@ const List<Choice> choices = const <Choice>[
   const Choice(title: 'Settings', icon: Icons.settings),
   const Choice(title: 'My Location', icon: Icons.my_location),
 ];
-```
+{{< /highlight >}}
 
 <span id="logo_header"></span>
 ## センターロゴヘッダー
@@ -129,7 +129,7 @@ const List<Choice> choices = const <Choice>[
 
 <img src="https://flutter.ctrnost.com/images/layout/header/standard/logo_01.png" style="min-width:300px" alt="Logo1" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -156,7 +156,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 ※イメージの読み込み設定をしていない場合は[こちら](/settings/)
 
 <span id="logo2_header"></span>
@@ -166,7 +166,7 @@ class MyApp extends StatelessWidget {
 
 <img src="https://flutter.ctrnost.com/images/layout/header/standard/logo_02.png" style="min-width:300px" alt="Logo2" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -191,5 +191,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 ※イメージの読み込み設定をしていない場合は[こちら](/settings/)

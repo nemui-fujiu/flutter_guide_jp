@@ -33,7 +33,7 @@ description = "画面遷移(Navigator)の移動(遷移)の仕組み、使い方�
 
 事前に定義した状態での画面遷移から説明していきます。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,10 +88,10 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 事前に``routes``を定義する場合は以下のように定義します。
-```dart
+{{< highlight dart>}}
 return MaterialApp(
   home: MainPage(),
   routes: <String, WidgetBuilder> {
@@ -99,22 +99,22 @@ return MaterialApp(
     '/subpage': (BuildContext context) => new SubPage()
   },
 );
-```
+{{< /highlight >}}
 ``/home``のようなルーティング名称に対して、表示されるページを作成しウィジェットを設定します。
 
-```dart
+{{< highlight dart>}}
 '/home': (BuildContext context) => new MainPage(),
-```
+{{< /highlight >}}
 
 遷移するには``Navigator.of(context).pushNamed``に対して遷移先の名称を渡すことで、対象のウィジェットを呼び出します。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).pushNamed("/subpage"), child: new Text('Subページへ'),)
-```
+{{< /highlight >}}
 
 呼び出されたウィジェットは``MainPage``の上に``SubPage``になりナビゲーションヘッダーに戻るボタンが表示されているのがわかると思います。
 
-```dart
+{{< highlight dart>}}
 class SubPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -136,20 +136,20 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 ``SubPage``から遷移元の画面へ戻るには、ナビゲーションヘッダーの戻るボタンを押下するか、``Navigator.of(context).pop()``を行い、``SubPage``をポップして取り除くことで、元のページへ戻ります。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).pop(), child: new Text('戻る'),)
-```
+{{< /highlight >}}
 
 ## 画面遷移(Navigator.of(context).pushReplacementNamed)
 
 先ほど説明した``pushName``以外にも遷移方法があります。  
 ``pushReplacementNamed``を使うことで、前の画面に戻ることができない遷移を作成することが可能です。
 
-```dart
+{{< highlight dart>}}
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -192,7 +192,7 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img>
 
@@ -207,7 +207,7 @@ class SubPage extends StatelessWidget {
 ``Navigator.popUntil``は指定した条件(``ModalRoute.withName("/sub1page")``)の対象をポップするまで間の画面をポップし続けます。   
 この時、``/home``(最初の画面)を指定すると、``/home``もポップしようとしてエラーになるため注意してください。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -296,7 +296,7 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 
 <img src="/images/basic/navigation/06/navi_until.svg" style="min-width:300px;max-width:500px;" alt="PushとPop">
@@ -306,7 +306,7 @@ class SubPage extends StatelessWidget {
 
 ``pushNamedAndRemoveUntil``は第2引数で指定した画面まで画面をポップして、第1引数の画面をプッシュします。
 
-```dart
+{{< highlight dart>}}
 class SubPage extends StatelessWidget {
   final Pages page;
   SubPage({this.page});
@@ -353,23 +353,23 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 動作としてはHome画面を含めてポップし続けて、最後にSub１をプッシュしています。
 そのため、Sub1で戻るを押してポップすると、画面がなくなり真っ暗になります。
 
 ``(_) => false``とすることで、画面を新規にプッシュせずに終わることができるので、初期画面(スプラッシュやホーム)に戻す時に便利です。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.pushNamedAndRemoveUntil(context, "/home", (_) => false), child: new Text('ホームへ')),
-```
+{{< /highlight >}}
 
 
 ## ルーティング書かない遷移
 
 最初にルーティングを書かないで画面遷移することも可能です。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -424,38 +424,38 @@ class SubPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 以下のように``Navigator.of(context).push``と``MaterialPageRoute``を利用して画面を呼び出します。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) {
   return SubPage();
 })), child: new Text('Subページへ'),)
-```
+{{< /highlight >}}
 
 この形で呼び出した画面であっても、プッシュされていることには変わりないため、ポップすることで前の画面へ戻る動作が可能です。
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).pop(), child: new Text('戻る')),
-```
+{{< /highlight >}}
 
 また、ルーティング名をつけることで、今まで紹介した画面遷移を利用することが可能になります。
 
-```dart
+{{< highlight dart>}}
 MaterialPageRoute(
   settings: const RouteSettings(name: "/sub1page"),
   builder: (context) {
     return SubPage();
   }
 ),
-```
+{{< /highlight >}}
 
 他にも今まで紹介した方法と同じ画面遷移が提供されています。
 
 ### 画面の置き換えをして前画面への遷移をできなくする処理
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).pushReplacement(
   MaterialPageRoute(
     settings: const RouteSettings(name: "/detail"),
@@ -464,11 +464,11 @@ RaisedButton(onPressed: () => Navigator.of(context).pushReplacement(
     }
   ),
 ), child: new Text('Subページへ'),)
-```
+{{< /highlight >}}
 
 ### 特定の画面まで、画面をポップして新規に画面を作成する処理
 
-```dart
+{{< highlight dart>}}
 RaisedButton(onPressed: () => Navigator.of(context).pushAndRemoveUntil(
   MaterialPageRoute(
     settings: const RouteSettings(name: "/subpage"),
@@ -478,5 +478,5 @@ RaisedButton(onPressed: () => Navigator.of(context).pushAndRemoveUntil(
   ),
   ModalRoute.withName("/home"),
 ), child: new Text('Subページへ'),)
-```
+{{< /highlight >}}
 

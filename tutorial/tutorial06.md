@@ -22,18 +22,18 @@ ListViewのbuilderを利用すると必要に応じてリストビューを遅�
 1. 単語を保存するために、_suggestionsリストをRandomWordsStateクラスに追加します。   
 また、_biggerFont変数を用意してフォントサイズを指定できるようにしましょう。
 
-    ```dart
+    {{< highlight dart >}}
     class RandomWordsState extends State<RandomWords> {
       final _suggestions = <WordPair>[];
       final _biggerFont = const TextStyle(fontSize: 18.0);
       // ···
     }
-    ```
+    {{< /highlight >}}
 <div style="background-color:#d1ecf1;padding:20px;color:#0c5460;border-radius:10px;">
 <span>
-変数やメソッド名の前につけるアンダースコア(_)はDartではPrivateを意味します。<br/>  
-今回定義した2つの変数はprivate変数となり、クラス内からしかアクセスできません。<br/>  
-Dartをあまり使ったことがない人には馴染みがないと思いますのでここで覚えておきましょう。<br/>
+変数やメソッド名の前につけるアンダースコア(_)はDartではPrivateを意味します。  
+今回定義した2つの変数はprivate変数となり、クラス内からしかアクセスできません。  
+Dartをあまり使ったことがない人には馴染みがないと思いますのでここで覚えておきましょう。
 </span>
 </div>
 
@@ -47,7 +47,7 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
     今回の構成ではユーザがスクロールするたびにリストが無限に増加します。 
 
 
-    ```dart
+    {{< highlight dart >}}
     Widget _buildSuggestions() {
       return ListView.builder(
           padding: const EdgeInsets.all(16.0),
@@ -61,7 +61,7 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
             return _buildRow(_suggestions[index]); /*5*/
           });
     }
-    ```
+    {{< /highlight >}}
  
     1. itemBuilderで一行ごとに処理が呼ばれ、偶数行の場合にListTileを表示し、奇数行のときにDividerを表示します。   
     こうすることで文字と線を交互に表示して、見た目上わかりやすくしています。
@@ -73,7 +73,7 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
 
 3. _buildRowメソッドの追加
     
-    ```dart
+    {{< highlight dart >}}
     Widget _buildRow(WordPair pair) {
       return ListTile(
         title: Text(
@@ -82,12 +82,12 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
         ),
       );
     }
-    ```
+    {{< /highlight >}}
 
 4. RandomWordsStateの書き換え   
     RandomWordsStateクラスのbuildメソッドを以下のように書き換え、_buildSuggestionsメソッドを呼び出すように変更してください。   
     ついでにAppBarの定義も行い、MyAppクラスで定義していたヘッダーも移動させてしまいます。
-    ```dart
+    {{< highlight dart >}}
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -97,11 +97,11 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
         body: _buildSuggestions(),
       );
     }
-    ```
+    {{< /highlight >}}
 
 5. MyAppの変更   
     MyAppクラスを以下のように変更します。
-    ```dart
+    {{< highlight dart >}}
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
@@ -111,7 +111,7 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
         );
       }
     }
-    ```
+    {{< /highlight >}}
 
 6. 実行   
 ソースを保存しホットリロードが実行されることで、ソースが書き換わります。  
@@ -124,7 +124,7 @@ Dartをあまり使ったことがない人には馴染みがないと思いま�
 チュートリアルはここで一旦終了です。  
 それではFlutterで開発効率をあげて面白くて役に立つ新しいアプリをいっぱい作っていただければ幸いです。
 
-```dart
+{{< highlight dart >}}
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
@@ -178,4 +178,4 @@ class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => new RandomWordsState();
 }
-```
+{{< /highlight >}}

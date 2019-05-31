@@ -11,7 +11,7 @@ description = "「Drawer」はAndroidアプリでよく見るUIで、左から�
 「Drawer」はAndroidアプリでよく見るUIで、左からドロワーを表示し、メニューなどを配置するのに利用します。   
 今回は「Drawer」について解説していきます。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/navigation/05/drawer_01.gif" style="min-width:300px;max-width:600px;" alt="Drawer"/>
 
@@ -50,17 +50,17 @@ class _MainPageState extends State<MainPage> {
 子要素として「ListView」を持つようにします。  
 必ずしも「ListView」でなければいけない訳ではないですが、通常のドロワー形式でメニューを作る場合は「ListView」で対応できるかと思います。
 
-```dart
+{{< highlight dart>}}
   drawer: Drawer(
     child: ListView(
     ),
   ),
-```
+{{< /highlight >}}
 
 あとは通常の「ListView」の使い方と代わりはありません。  
 ただ、「DrawerHeader」を使うことでヘッダー要素を作ることが可能です。
 
-```dart
+{{< highlight dart>}}
 child: ListView(
   children: <Widget>[
     DrawerHeader(
@@ -79,7 +79,7 @@ child: ListView(
     ),
   ],
 ),
-```
+{{< /highlight >}}
 
 このようにして簡単に「Drawer」の作成ができました。
 

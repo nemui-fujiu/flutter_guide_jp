@@ -15,7 +15,7 @@ description = "「DatePicker」は日付を選択するのにモバイルでは�
 
 「DatePicker」は日付を選択するモーダルを表示します。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   DateTime _date = new DateTime.now();
@@ -42,7 +42,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/datepicker_01.gif" style="min-width:300px;max-width:600px;" alt="DatePicker"/>
 
@@ -58,7 +58,7 @@ class _ChangeFormState extends State<ChangeForm> {
 
 「DateTimePicker」は時間を選択するモーダルを表示します。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   TimeOfDay _time = new TimeOfDay.now();
@@ -83,7 +83,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/datetimepicker_01.gif" style="min-width:300px;max-width:600px;" alt="DateTimePicker"/>
 

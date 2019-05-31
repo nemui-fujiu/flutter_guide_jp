@@ -11,7 +11,7 @@ description = "BottomSheetは、SnackBarのように画面下部から伸びて�
 BottomSheetは、SnackBarのように画面下部から伸びてくる領域を作成できます。  
 一覧項目のメニューや、音楽再生のコントローラ、ヘルプなど色々な使い方ができます。
 
-```dart
+{{< highlight dart>}}
 enum Answers{
   OK,
   CLOSE
@@ -71,24 +71,24 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/dialog/02/bottom_sheet.gif" style="min-width:300px;max-width:600px;" alt="showModalBottomSheet"/>
 
 BottomSheetを作るにはまず、``showModalBottomSheet``に``context``を渡して、``builder``に内容を書きます。
 この時``showModalBottomSheet``のジェネリクスには戻り値の型を定義してください。   
 
-```dart
+{{< highlight dart>}}
 showModalBottomSheet<Answers>(
   context: context,
   builder: (BuildContext context){
   }
 );
-```
+{{< /highlight >}}
 
 内容に関しては自由に作成できるので、単純なリスト以外にも好きに配置して、表現することが可能です。
 
-```dart
+{{< highlight dart>}}
 return new Container(
   height: 200,
   padding: new EdgeInsets.all(10.0),
@@ -104,7 +104,7 @@ return new Container(
     ],
   ),
 );
-```
+{{< /highlight >}}
 
 ``showModalBottomSheet``は``showDialog``と同じく``then``で書く方式と``async/await``があります。  
 今回は``async/await``の書き方で戻り値を受け取っています。
@@ -112,7 +112,7 @@ return new Container(
 
 また、GlobalKeyを使って``showBottomSheet``を利用すると以下のようになります。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -155,6 +155,6 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 ``_scaffoldKey``をScaffoldクラスに渡し``_scaffoldKey.currentState``を使って``showBottomSheet``表示することができます。

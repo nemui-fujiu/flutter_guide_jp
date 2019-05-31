@@ -11,7 +11,7 @@ description = "画面の下部にナビゲーションメニューを配置す�
 画面の下部にナビゲーションメニューを配置する時に利用するのが「BottomNavigationBar」です。  
 今回は、「BottomNavigationBar」を使ったサンプルを説明していきます。  
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   int _currentIndex = 0;
@@ -66,7 +66,7 @@ class PageWidget extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/navigation/02/bottomnavicationbar_01.gif" style="min-width:300px;max-width:600px;" alt="BottomNavigationBar"/>
 
@@ -78,7 +78,7 @@ class PageWidget extends StatelessWidget {
 
 まず、メニュー部分を「BottomNavigationBar」で作成します。
 
-```dart
+{{< highlight dart>}}
   bottomNavigationBar: BottomNavigationBar(
     items: <BottomNavigationBarItem>[
       BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
@@ -90,18 +90,18 @@ class PageWidget extends StatelessWidget {
     onTap: _onItemTapped,
     type: BottomNavigationBarType.fixed,
   ),
-```
+{{< /highlight >}}
 
 BottomNavigationBarには表示するナビゲーションメニューを``items``に「BottomNavigationBarItem」のリストを設定します。  
 「BottomNavigationBarItem」はメニューとして以下のような要素を定義します。  
 
-```dart
+{{< highlight dart>}}
 items: <BottomNavigationBarItem>[
   BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
   BottomNavigationBarItem(icon: Icon(Icons.photo_album), title: Text('Album')),
   BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('Chat')),
 ],
-```
+{{< /highlight >}}
 
 - ``icon``はメニューの表示アイコンです。
 - ``activeIcon``は選択状態のアイコンを指定します。  
@@ -110,7 +110,7 @@ items: <BottomNavigationBarItem>[
 
 次に``onTap``でアイコンを押された時の動作を作成します。 
 
-```dart
+{{< highlight dart>}}
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
       ),
@@ -118,23 +118,23 @@ items: <BottomNavigationBarItem>[
   }
 
   void _onItemTapped(int index) => setState(() => _currentIndex = index );
-```
+{{< /highlight >}}
 
 今回は、``_pageWidgets``変数にページの配列を準備しているので、``_onItemTapped``では``_currentIndex``を更新のみをしています。
 
-```dart
+{{< highlight dart>}}
   final _pageWidgets = [
     PageWidget(color:Colors.white, title:'Home'),
     PageWidget(color:Colors.blue, title:'Album'),
     PageWidget(color:Colors.orange, title:'Chat'),
   ];
-```
+{{< /highlight >}}
 
 これにより、``body``に設定されている``_pageWidgets``の対象ページを取得して、画面に表示さ流ようになるので、これで完成です。
 
-```dart
+{{< highlight dart>}}
 body: _pageWidgets.elementAt(_currentIndex),
-```
+{{< /highlight >}}
 
 「BottomNavigationBar」は選択時の見た目を``type``によって変えることが可能です。  
 ``BottomNavigationBar.type``には以下の2種類があり、それぞれ以下のような見た目になるので、使い分けてみてください。
@@ -146,10 +146,10 @@ body: _pageWidgets.elementAt(_currentIndex),
 <img src="/images/basic/navigation/02/bottomnavicationbar_03.gif" style="min-width:300px;max-width:600px;" alt="BottomNavigationBarType.shifting"/>
 
 この時、「BottomNavigationBarItem」の背景色が指定されていないと、真っ白になってしまうので、色指定を忘れずに行いましょう。
-```dart
+{{< highlight dart>}}
 items: <BottomNavigationBarItem>[
   BottomNavigationBarItem(icon: Icon(Icons.home), backgroundColor: Colors.blueAccent, title: Text('Home')),
   BottomNavigationBarItem(icon: Icon(Icons.photo_album), backgroundColor: Colors.blueAccent, title: Text('Album')),
   BottomNavigationBarItem(icon: Icon(Icons.chat), backgroundColor: Colors.blueAccent, title: Text('Chat')),
 ],
-```
+{{< /highlight >}}

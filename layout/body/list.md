@@ -18,7 +18,7 @@ description = "ListViewを使ったレイアウト一覧を作成して、よく
 
 <img src="/images/layout/body/list/list.png" style="min-width:300px" alt="list" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
     ),
   ];
 }
-```
+{{< /highlight >}}
 
 <span id="separator"></span>
 ## 区切り線
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
 
 
 
-```dart
+{{< highlight dart>}}
 return MaterialApp(
   title: title,
   home: Scaffold(
@@ -81,7 +81,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <span id="list_bottom_separator"></span>
 ## リストの最後にも区切り線
@@ -91,7 +91,7 @@ return MaterialApp(
 
 <img src="/images/layout/body/list/list_bottom_separator.png" style="min-width:300px" alt="bottom separator" />
 
-```dart
+{{< highlight dart>}}
   List<Widget> listTiles = <Widget>[
     Container(
       decoration: new BoxDecoration(
@@ -127,7 +127,7 @@ return MaterialApp(
         )
     ),
   ];
-```
+{{< /highlight >}}
 
 <span id="header_list"></span>
 ## ヘッダー付きのリスト
@@ -139,7 +139,7 @@ return MaterialApp(
 <img src="/images/layout/body/list/header_list.png" style="min-width:300px" alt="header list" />
 
 
-```dart
+{{< highlight dart>}}
   List<Widget> listTiles = <Widget>[
     Container(
       child: ListTile(
@@ -188,7 +188,7 @@ return MaterialApp(
       )
     ),
   ];
-```
+{{< /highlight >}}
 
 ---
 

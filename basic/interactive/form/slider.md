@@ -13,7 +13,7 @@ description = "スライダーは数値の変更でよく使われるUIです。
 
 ### Slider
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   double _value = 0.0;
@@ -49,7 +49,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/slider_01.gif" style="min-width:300px;max-width:600px;" alt="Slider"/>
 

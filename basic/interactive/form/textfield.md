@@ -16,7 +16,7 @@ Flutterでのテキスト入力の方法と操作にはいくつかの方法が�
 
 「TextField」は文字列を入力するためのシンプルな入力フォームとなります。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/textfield_01.png" style="min-width:300px;max-width:600px;" alt="TextField"/>
 
@@ -92,7 +92,7 @@ class _ChangeFormState extends State<ChangeForm> {
 - ``maxLines``は入力できる行数の最大行数を設定できます。これによりHTMLで言う所のテキストエリア表示が可能です。
 - ``decoration``を追加することで、表示を整形することも可能です。  
 
-```dart
+{{< highlight dart>}}
 new TextField(
   enabled: true,
   // 入力数
@@ -109,7 +109,7 @@ new TextField(
   //パスワード
   onChanged: _handleText,
 ),
-```
+{{< /highlight >}}
 <img src="/images/basic/interactive/02/textfield_04.png" style="min-width:300px;max-width:600px;" alt="TextField obscureText true"/>
 
 - ``inputFormatters``を利用すると、入力値に対するフォーマットを行うことが可能です。  
@@ -120,11 +120,11 @@ new TextField(
 #### WhitelistingTextInputFormatter
 
 「WhitelistingTextInputFormatter」または「BlacklistingTextInputFormatter」を使う場合は以下のimportが必要です。
-```dart
+{{< highlight dart>}}
 import 'package:flutter/services.dart';
-```
+{{< /highlight >}}
 
-```dart
+{{< highlight dart>}}
 new TextField(
   enabled: true,
   // 入力数
@@ -144,30 +144,30 @@ new TextField(
   //パスワード
   onChanged: _handleText,
 ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/textfield_05.gif" style="min-width:300px;max-width:600px;" alt="TextField WhitelistingTextInputFormatter"/>
 
 このように、``WhitelistingTextInputFormatter``は入力可能な文字を制限することが可能で、デフォルトで``digitsOnly``が用意されています。  
 他にも制御をしたい場合は以下のように正規表現を渡すことによって独自に文字列を制限することが可能です。
-```dart
+{{< highlight dart>}}
 WhitelistingTextInputFormatter(RegExp(r'\d+'))
-```
+{{< /highlight >}}
 
 #### BlacklistingTextInputFormatter
 
 また同じ要領で``BlacklistingTextInputFormatter``を使うことで入力を制限することも可能です。  
 デフォルトで``singleLineFormatter``が用意されています。
 独自に実装したい場合は、以下のように実装することで、独自に文字列を制限することが可能です。
-```dart
+{{< highlight dart>}}
 BlacklistingTextInputFormatter(RegExp(r'\n'))
-```
+{{< /highlight >}}
 
 ``BlacklistingTextInputFormatter``は、リストに該当する文字列があった場合に、文字列を置換することも可能です。  
 その場合は、以下のように第２引数に置換後の文字列を渡してください。
-```dart
+{{< highlight dart>}}
 BlacklistingTextInputFormatter(RegExp(r'[0-9]'), replacementString:'-')
-```
+{{< /highlight >}}
 ※数値の入力を全てハイフンへ変換しています。
 
 ### TextEditingController
@@ -176,7 +176,7 @@ BlacklistingTextInputFormatter(RegExp(r'[0-9]'), replacementString:'-')
 「TextField」や、「TextFormField」に対して「TextEditingController」を使って、複雑な制御を行うことができます。   
 「TextField」の制御を「TextEditingController」を利用して行います。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   final TextEditingController _textEditingController = new TextEditingController();
@@ -237,7 +237,7 @@ class _ChangeFormState extends State<ChangeForm> {
     });
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/textfield_06.gif" style="min-width:300px;max-width:600px;" alt="TextEditingController"/>
 
@@ -246,7 +246,7 @@ class _ChangeFormState extends State<ChangeForm> {
 ``initState()``メソッドで``addListener``を設定し、処理を追加することで入力途中での文言をプリントしています。  
 このようにリスナー登録することで複雑な制御が可能です。  
 
-```dart
+{{< highlight dart>}}
 @override
 void initState() {
   super.initState();
@@ -255,23 +255,23 @@ void initState() {
 _printLatestValue() {
   print("入力状況: ${_textEditingController.text}");
 }
-```
+{{< /highlight >}}
 
 「_ChangeFormState」クラスが破棄されるタイミングで確実にリソースが破棄されるように以下を記載しておきましょう。
 
-```dart
+{{< highlight dart>}}
 @override
 void dispose() {
   _textEditingController.dispose();
   super.dispose();
 }
-```
+{{< /highlight >}}
 
 ### TextFormField
 
 「TextFormField」はフォーム入力で必要な色々な機能を提供してくれます。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   final _formKey = GlobalKey<FormState>();
@@ -337,7 +337,7 @@ class _ChangeFormState extends State<ChangeForm> {
     }
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/textfield_07.gif" style="min-width:300px;max-width:600px;" alt="TextFormField"/>
 
@@ -350,7 +350,7 @@ falseの場合にどのタイミングで``validator()``メソッドが実行さ
 - 「Form」クラスと「GlobalKey」クラスを使うことで、フォームをユニークなグループにします。  
 今回以下のように保存処理を実行しています。
 
-```dart
+{{< highlight dart>}}
 void _submission() {
   if (this._formKey.currentState.validate()) {
     this._formKey.currentState.save();
@@ -361,23 +361,23 @@ void _submission() {
     print(this._email);
   }
 }
-```
+{{< /highlight >}}
 
 以下が実行されることで、``_formKey``のフォームに登録されているすべての``validator()``が実行されその結果を返します。
 
-```dart
+{{< highlight dart>}}
 this._formKey.currentState.validate()
-```
+{{< /highlight >}}
 
 以下を実行されることで、``_formKey``のフォームに登録されているすべての``save()``が実行されます。
-```dart
+{{< highlight dart>}}
 this._formKey.currentState.save();
-```
+{{< /highlight >}}
 
 
 
 ## 参考
----
+
 [TextField](https://docs.flutter.io/flutter/material/TextField-class.html)  
 [TextEditingController](https://docs.flutter.io/flutter/material/TextEditingController-class.html)  
 [TextFormField](https://docs.flutter.io/flutter/material/TextFormField-class.html)  

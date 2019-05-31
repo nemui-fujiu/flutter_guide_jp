@@ -11,7 +11,7 @@ description = "一番基本のヘッダーになります。アプリで実装�
 一番基本のヘッダーになります。  
 アプリで実装するよくあるヘッダー機能を網羅しているので、アプリヘッダーの実装が簡単に行えます。  
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,15 +38,15 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/navigation/01/appbar_01.png" style="min-width:300px;max-width:600px;" alt="AppBar"/>
 
-- ```leading```左端にアイコンの設定などを行います。
-- ```title```タイトル
-- ```centerTitle```タイトルをセンター寄せにするかを選択します。
-- ```backgroundColor```背景色の変更ができます。
-- ```actions```アクションボタンを配置するために利用します。   
+- ``leading``左端にアイコンの設定などを行います。
+- ``title``タイトル
+- ``centerTitle``タイトルをセンター寄せにするかを選択します。
+- ``backgroundColor``背景色の変更ができます。
+- ``actions``アクションボタンを配置するために利用します。   
 ``IconButton``や``PopupMenuButton``などを利用することでヘッダーにボタンを配置することができます。   
 
 IconButtonについては[こちら](/basic/interactive/form/button/#icon_button)   

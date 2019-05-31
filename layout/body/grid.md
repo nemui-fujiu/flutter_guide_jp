@@ -15,7 +15,7 @@ GridViewレイアウトはcrossAxisCountで並べる数を制御して、グリ�
 
 <img src="/images/layout/body/grid/grid.png" style="min-width:300px" alt="grid" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <span id="grid_icon"></span>
 ## グリッドアイコンカード
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
 
 <img src="/images/layout/body/grid/grid_icon.png" style="min-width:300px" alt="grid icon" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -90,14 +90,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 ちなみに「GridView.count」だと常に正方形のグリッドが作られますが高さの変更をしたいときはAspectをいじる事で可能です。
-```dart
+{{< highlight dart>}}
 GridView.count(
  childAspectRatio: 0.7, // 高さ
 )
-```
+{{< /highlight >}}
 
 <span id="grid_image"></span>
 ## 画像グリッドリスト
@@ -109,7 +109,7 @@ GridView.count(
 
 <img src="/images/layout/body/grid/grid_images.png" style="min-width:300px" alt="grid images" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -163,21 +163,21 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 
 本来はちゃんと画像を取得するべきですが、今回は横着して3枚の画像をランダムで出しています。  
 「Random」クラスはDartのmathパッケージにあるので事前にimportしてください。  
 
-```dart
+{{< highlight dart>}}
 import 'dart:math';
-```
+{{< /highlight >}}
 
-```dart
+{{< highlight dart>}}
     var rng = new Random();
     var imgNumber = rng.nextInt(3);
     var assetsImage = "assets/grid/m" + imgNumber.toString() + ".png";
-```
+{{< /highlight >}}
 
 ## 参考
 

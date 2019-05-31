@@ -20,7 +20,7 @@ Flutterの基本構成はほとんど全てWidgetです。 Flutterアプリで�
 また、レイアウト構成を確認しながら作業をしたい場合は、「debugPaintSizeEnabled」を有効にすると以下のようになります。  
 もともとアプリエンジニアであれば皆さんよく行う手法ですが、アイテムそれぞれの背景色を変更して見た目を確認する作業に似ていますね。
 
-```dart
+{{< highlight dart >}}
 // パッケージを追加
 import 'package:flutter/rendering.dart';
 
@@ -28,7 +28,7 @@ void main() {
   debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/01/icons_debug.png" style="min-width:300px;border:1px solid gray" alt="icons debug"/>
 
@@ -66,7 +66,7 @@ FlutterはGoogleが提供しており、Googleはデザイン面で[Material des
 作り方は簡単で、「MaterialApp」クラス「Scaffold」クラスなどを利用して作成すると作成できます。
 以下がそのソースです。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -83,14 +83,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/01/material_desgin.png" style="min-width:300px;max-width:600px;" alt="material desgin"/>
 
 また、マテリアルデザインを利用せずに自由なレイアウトで作成したい場合は、以下のように一つづつの要素を組み合わせて、配置することで自由にデザイン可能
 です。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/01/non_material_desgin.png" style="min-width:300px;max-width:600px;" alt="non material desgin"/>
 
@@ -117,12 +117,12 @@ class MyApp extends StatelessWidget {
 マテリアルデザインを利用せずレイアウトする場合は、Textに必要な表示の詳細を設定しないと、正しく表示ができなくなってしまいます。　　
 以下のように変更して確認してみてください。
 
-```dart
+{{< highlight dart >}}
 child: Text(
   'Hello World',
   textDirection: TextDirection.ltr,
 ),
-```
+{{< /highlight >}}
 
 MaterialAppクラスを利用している時にはデフォルトで設定されていた文字色やサイズが当たらないため、文字が表示されていない状態になっているかと思います。  
 このように、通常では細かく設定する必要があるデザインのデフォルト値をいろんなところで設定してくれます。  

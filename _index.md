@@ -6,34 +6,13 @@ description = "日本におけるFlutterでのアプリ開発が広く利用さ�
 keywords = "Flutter,アプリ,日本語,レイアウト,入門"
 +++
 
-<img src="https://flutter.ctrnost.com/images/logo_flutter_1080px_clr.png" width="450px" alt="Flutter Logo"/>
+<img lazyload="on" src="/images/top_thumnail.png" width="100%" alt="Flutter Logo" style="border: solid 1px rgba(111, 110, 110, 0.3);"/>
 
-# Flutter Guide JP
+{{% article-ads %}}
+
+# Flutter Doc JP
 
 日本におけるFlutterでのアプリ開発が広く利用され、アプリ開発の効率が向上することを願って、日本語によるFlutterの情報を配信していきます。
-
-## 目次
-
-- [インストール](/install/)
-- [チュートリアル](/tutorial/)
-- [概要](/basic/)
-  - [Flutterの基本](/basic/)
-        - [レイアウト](/basic/layout)
-        - [インタラクション](/basic/interactive)
-        - [ナビゲーション](/basic/navigation)
-- [レイアウトサンプル](/layout/)
-  - [Header](/layout/header/)
-        - [通常](/layout/header/standard)
-        - [タブ](/layout/header/tab)
-        - [特殊](/layout/header/special)
-  - [Body](/body/)
-        - [リストレイアウト](/layout/body/list)
-        - [グリッドレイアウト](/layout/body/grid)
-  - Footer
-
-- [設定](/settings)
-
----
 
 記載内容についてはできる限り正しい情報を配信できるように、公式サイトの情報および実際の検証を行った上で記事とすることを心がけておりますが、情報に誤りがあるような場合は皆様からのご指摘を頂けますと幸いです。
 

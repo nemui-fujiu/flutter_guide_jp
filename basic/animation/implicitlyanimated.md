@@ -29,7 +29,7 @@ ImplicitlyAnimatedWidgetクラスを継承しているとAnimateControllerなど
 「AnimatedAlign」を使うことで子要素の配置を変更してアニメーションさせることができます。  
 [AnimatedContainer](/basic/animation/animatedcontainer#alignment)のAlignmentでも同じ動きを作ることができます。　
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   Alignment _alg = Alignment.topLeft;
@@ -54,7 +54,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_align.gif" style="min-width:300px;max-width:600px;" alt="AnimatedAlign"/>
 
@@ -68,7 +68,7 @@ AnimatedAlignは``alignment``で子要素の配置を変更します。
 「AnimatedPadding」を使うことでPaddingを変更してアニメーションさせることができます。  
 [AnimatedContainer](/basic/animation/animatedcontainer#padding)のPaddingでも同じ動きを作ることができます。　
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _padding = 50;
@@ -98,7 +98,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_padding.gif" style="min-width:300px;max-width:600px;" alt="AnimatedPadding"/>
 
@@ -112,7 +112,7 @@ AnimatedPaddingは``padding``でPaddingを変更します。
 [AnimatedContainer](/basic/animation/animatedcontainer#size)のサイズ調整でも同じ動きを作ることができます。　   
 画像などを子要素にすることもできるので、クリックすると画像が拡大されるようなアニメーションを作ることも可能です。  
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin {
 
   double _width = 50;
@@ -139,7 +139,7 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_size.gif" style="min-width:300px;max-width:600px;" alt="AnimatedSize"/>
 
@@ -152,7 +152,7 @@ AnimatedSizeは``width``または``height``の値を変更してアニメーシ�
 「AnimatedDefaultTextStyle」を使うことでテキスト要素のアニメーションさせることができます。   
 テキストを目立たせたり動きのあるメッセージを作ることが可能です。   
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   TextStyle _style = TextStyle(color: Colors.blueAccent, fontSize: 30, fontWeight: FontWeight.w900);
@@ -175,7 +175,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_default_text_style.gif" style="min-width:300px;max-width:600px;" alt="AnimatedDefaultTextStyle"/>
 
@@ -188,7 +188,7 @@ AnimatedDefaultTextStyleは``style``の値を変更してアニメーション�
 「AnimatedOpacity」を使うことで色の濃さに対してのアニメーションさせることができます。   
 色の濃さをアニメーションすることで、フィードアウトやフィードインのようなアニメーションが簡単に作れます。  
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _opacity = 1.0;
@@ -215,7 +215,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_opacity.gif" style="min-width:300px;max-width:600px;" alt="AnimatedOpacity"/>
 
@@ -228,7 +228,7 @@ AnimatedOpacityは``opacity``の値を変更してアニメーションさせま
 「AnimatedPhysicalModel」を使うことで影の濃さなどに対してのアニメーションさせることができます。   
 モーダルやボタンが浮き上がったり、沈み込むようなアニメーションを作ることができます。  
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   bool _isDisabled = true;
@@ -263,7 +263,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_physical_model.gif" style="min-width:300px;max-width:600px;" alt="AnimatedPhysicalModel"/>
 
@@ -278,7 +278,7 @@ AnimatedPhysicalModelは`` borderRadius``と``elevation``をアニメーショ�
 「AnimatedPositioned」を使うことで位置を変化をアニメーションさせることができます。   
 「AnimatedAlign」との違いは、四辺からの距離の指定で細かく移動させることができる点です。  
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _top = 0;
@@ -310,7 +310,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_positioned.gif" style="min-width:300px;max-width:600px;" alt="AnimatedPositioned"/>
 
@@ -334,7 +334,7 @@ AnimatedPositionedは以下の値を変更してアニメーションさせま�
 例えばアラビア語のように文字の読む方向が、右から左になっているので、通常とは逆に``start``は右、``end``は左になります。   
 このように国によって右から左、左から右など見る順が違うので、Directionalityの設定で、方向を容易に制御できるようになります。   
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   double _start = 0;
@@ -369,7 +369,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/animation/02/animated_positioned_directional.gif" style="min-width:300px;max-width:600px;" alt="AnimatedPositionedDirectional"/>
 

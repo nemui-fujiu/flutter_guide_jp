@@ -13,13 +13,13 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
 
 1. 次に外部パッケージの取り込み方法を学びましょう。``/pubspec.yaml``で依存関係を管理するので、以下のように編集します。   
 
-    ```yaml
+    {{< highlight yaml >}}
       dependencies:
          flutter:
            sdk: flutter
          cupertino_icons: ^0.1.2
          english_words: ^3.1.0
-    ```
+    {{< /highlight >}}
 
     今回取り込むのは``english_words``というパッケージです。
     このパッケージはランダムに英単語を生成するためのライブラリで、デモやテストなどランダムに文字列を取得したいときに利用します。   
@@ -29,20 +29,20 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
 
 2. 通常は``/pubspec.yaml``に変更を加え保存すると同時にパッケージがダウンロードされます。
 もしダウンロードされない場合は直接以下コマンドを叩いてパッケージを取得してください。
-    ```bash
+    {{< highlight bash >}}
     $ flutter packages get
-    ```
+    {{< /highlight >}}
 
 3. ``lib/main.dart``に先ほど取得した外部パッケージをimportします。
 
-    ```dart
+    {{< highlight dart >}}
       import 'package:flutter/material.dart';
       import 'package:english_words/english_words.dart';
-    ```
+    {{< /highlight >}}
 
 4. 固定で表示していた文字列をランダムな英語に変更しましょう。
 
-    ```dart
+    {{< highlight dart >}}
       @override
       Widget build(BuildContext context) {
         final wordPair = WordPair.random();
@@ -58,7 +58,7 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
           ),
         );
       }
-    ```
+    {{< /highlight >}}
 
 5. 変更したらソースを保存してみてください。
 ホットリロードのタイミングで表示される単語が変わるようになったかと思います。

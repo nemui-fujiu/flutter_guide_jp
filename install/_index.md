@@ -33,33 +33,33 @@ keywords = "Flutter,アプリ,日本語,インストール,install,入門"
 
 ダウンロードしたファイルを解凍して好きなところに配置してください。
 
-```
+{{< highlight bash >}}
 $ cd ~/development
 $ unzip ~/Downloads/flutter_macos_v1.0.0-stable.zip
-```
+{{< /highlight >}}
 ※ unzip対象はダウンロードしたFlutterのファイルです。
 
 解凍できたら、PATHを通してコマンドが利用できるようにしましょう。
 
-```
+{{< highlight bash >}}
 $ export PATH="$PATH:`pwd`/flutter/bin"
-```
+{{< /highlight >}}
 
 実際にコマンドを実行して動作するのを確認できたら完了です。
 
-```
+{{< highlight bash >}}
 $ flutter --version
 Flutter 1.0.0 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision 5391447fae (10 weeks ago) • 2018-11-29 19:41:26 -0800
 Engine • revision 7375a0f414
 Tools • Dart 2.1.0 (build 2.1.0-dev.9.4 f9ebf21297)
-```
+{{< /highlight >}}
 
-このままだと、一時的な登録となってしまうので、永続的な登録をするのであれば、```$HOME/.bash_profile```に登録しましょう。
+このままだと、一時的な登録となってしまうので、永続的な登録をするのであれば、``$HOME/.bash_profile``に登録しましょう。
 
-```~/.bash_profile
+{{< highlight bash >}}
 export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin"
-```
+{{< /highlight >}}
 ※ 「[PATH_TO_FLUTTER_GIT_DIRECTORY]」を実際のパスと置き換えてください。
 
 ### 2. Flutterの実行環境を整える。
@@ -68,9 +68,9 @@ FlutterはAndoird、iOSの2つのアプリを一括で作るため、両方の�
 実行環境を整えるのに便利なコマンドがFlutterにはあるのでそちらを利用して整えていきましょう。  
 コマンドは以下になります。
 
-```
+{{< highlight bash >}}
 $ fluttter doctor
-```
+{{< /highlight >}}
 
 実際のコマンドを叩くとFlutterでの開発に必要な情報を収集して診断してくれます。
 
@@ -81,21 +81,21 @@ $ fluttter doctor
 1. Xcode9.0以降をインストールしてください。
 2. 以下のように設定することで最新のXcodeが指定できます。
    
-    ```
+    {{< highlight bash >}}
     $ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-    ```   
+    {{< /highlight >}}   
     別のバージョンを利用したい場合は、パスを設定してください。  
 3. Xcodeを開いて確認するか以下コマンドにて、仕様許諾に同意してください。
 
-    ```
+    {{< highlight bash >}}
     $ sudo xcodebuild -license
-    ```
+    {{< /highlight >}}
 
 4. シミュレータを設定する。   
    以下のようにコマンドで起動するか、Spotlightなどでシミュレータを起動させます。
-    ```
+    {{< highlight bash >}}
     $ open -a Simulator
-    ```
+    {{< /highlight >}}
 
 5. シミュレータを起動して**[ハードウェア]>[デバイス]**メニューの設定を確認して、シミュレータが64ビットデバイス(iPhone5s以降)を使用していることを確認してください。
 

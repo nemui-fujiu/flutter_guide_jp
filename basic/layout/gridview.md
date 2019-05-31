@@ -25,7 +25,7 @@ GridViewを構築するためには4つの方法があります。
 
 一般的なGridViewの表示方法です。  
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_01.png" style="min-width:300px;max-width:600px;" alt="GridView.count"/>
 
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
 例えば、500pxの横幅のある「GridView」に対して、``maxCrossAxisExtent``を150と指定した婆、幅125pxのグリッドが4列並んだ表示となります。  
 
 
-```dart
+{{< highlight dart >}}
 body: GridView.extent(
     maxCrossAxisExtent: 150,
     padding: const EdgeInsets.all(4),
@@ -77,7 +77,7 @@ body: GridView.extent(
     crossAxisSpacing: 4,
     children: list
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_02.png" style="min-width:300px;max-width:600px;" alt="GridView.extent"/>
 
@@ -90,7 +90,7 @@ body: GridView.extent(
 ``itemBuilder``は画面表示時に実行されるため、無限にグリッドを作成することが可能です。  
 ギャラリー、検索結果の表示などに利用すると良いかと思います。 
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_03.png" style="min-width:300px;max-width:600px;" alt="GridView.builder"/>
 
@@ -135,7 +135,7 @@ class MyApp extends StatelessWidget {
 ``builder``で利用している、``SliverGridDelegateWithFixedCrossAxisCount``は``GridView.count``と同じです。  
 ``crossAxisCount``で横に並べる数を指定して、グリッドを作成します。
 
-```dart
+{{< highlight dart >}}
 body: GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 2,
@@ -147,14 +147,14 @@ body: GridView.builder(
       return _photoItem(grid[index]);
     }
 )
-```
+{{< /highlight >}}
 
 ### SliverGridDelegateWithMaxCrossAxisExtent
 
 ``builder``では、``SliverGridDelegateWithMaxCrossAxisExtent``も利用でき、``GridView.extent``と同じ制御が可能です。    
 ``maxCrossAxisExtent``で横に並べるグリッドの最大幅を指定して、グリッドを作成します。
 
-```dart
+{{< highlight dart >}}
 body: GridView.builder(
   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
     maxCrossAxisExtent: 150,
@@ -166,14 +166,14 @@ body: GridView.builder(
     return _photoItem(grid[index]);
   }
 )
-```
+{{< /highlight >}}
 
 ### ScrollDirection
 
 「GridView」クラスであればどれでも利用できるのですが、``scrollDirection``はグリッドを並べる方向を変更するために使います。  
 デフォルトでは``Axis.vertical``です。
 
-```dart
+{{< highlight dart >}}
 body: GridView.builder(
   scrollDirection: Axis.horizontal,
   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -186,7 +186,7 @@ body: GridView.builder(
     return _photoItem(grid[index]);
   }
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_04.gif" style="min-width:300px;max-width:600px;" alt="GridView scrollDirection"/>
 
@@ -205,7 +205,7 @@ RowやColumnでも同じ考え方が出てきましたが、以下のような�
 このように並ぶ方向に対して、``mainAxisSpacing``と``crossAxisSpacing``が決まることに注意してください。  
 特に、先に説明した``scrollDirection``と併用する場合はスペース位置が変わりますのでお気をつけください。  
 
-```dart
+{{< highlight dart >}}
 body: GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 3,
@@ -218,13 +218,13 @@ body: GridView.builder(
     return _photoItem(grid[index]);
   }
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_06.png" style="min-width:300px;max-width:600px;" alt="GridView mainAxisSpacing"/>
 
 このように上下に対してスペースができます。
 
-```dart
+{{< highlight dart >}}
 body: GridView.builder(
   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 3,
@@ -237,7 +237,7 @@ body: GridView.builder(
     return _photoItem(grid[index]);
   }
 )
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_07.png" style="min-width:300px;max-width:600px;" alt="GridView crossAxisSpacing"/>
 
@@ -249,7 +249,7 @@ body: GridView.builder(
 そのため縦の長さを伸ばしたい場合は、``childAspectRatio``で比率を変えてあげます。  
 このプロパティは、「GridView」クラスであれば上記で説明したどれでも利用できます。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -282,15 +282,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/06/gridview_08.png" style="min-width:300px;max-width:600px;" alt="GridView ChildAspectRatio"/>
 
-
-
-
 ## 参考
-
----
 
 [GridView](https://docs.flutter.io/flutter/widgets/GridView-class.html)

@@ -15,7 +15,7 @@ description = "チェックボックスはOnとOffの切り替えを行うこと
 
 「CheckBox」はWebページでおなじみのチェックボックスと同じものを作成することができます。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/checkbox_01.gif" style="min-width:300px;max-width:600px;" alt="CheckBox"/>
 
@@ -84,7 +84,7 @@ class _ChangeFormState extends State<ChangeForm> {
 
 「CheckboxListTile」は「ListTile」の一種で、標準的なレイアウトを提供してくれます。
 
-```dart
+{{< highlight dart>}}
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10.0),
@@ -106,7 +106,7 @@ class _ChangeFormState extends State<ChangeForm> {
       )
     );
   }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/checkbox_02.gif" style="min-width:300px;max-width:600px;" alt="CheckboxListTile"/>
 

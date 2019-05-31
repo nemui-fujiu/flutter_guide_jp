@@ -22,7 +22,7 @@ ColumnとRow基本や、MinAxisAlignment、CrossAxisAlignmentの初歩的なつ�
 
 まず一つ目は``MainAxisAlignment.spaceAround``についてです。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_01.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment.spaceAround"/>
 
@@ -56,9 +56,9 @@ class MyApp extends StatelessWidget {
 
 ``MainAxisAlignment.spaceBetween``は以下のようになります。
 
-```dart
+{{< highlight dart >}}
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_02.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment.spaceBetween"/>
 
@@ -68,9 +68,9 @@ class MyApp extends StatelessWidget {
 
 ``MainAxisAlignment.spaceEvenly``は以下のようになります。
 
-```dart
+{{< highlight dart >}}
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_03.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment.spaceEvenly"/>
 
@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
 
 ``MainAxisSize.max``は以下のようになります。
 
-```dart
+{{< highlight dart >}}
   child: Row(
     mainAxisSize: MainAxisSize.max,
     mainAxisAlignment: MainAxisAlignment.center,
@@ -95,7 +95,7 @@ class MyApp extends StatelessWidget {
       Container( color: Colors.orange, width: 50, height:50 ),
     ],
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_04.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment.spaceEvenly"/>
 
@@ -105,9 +105,9 @@ class MyApp extends StatelessWidget {
 
 ``MainAxisSize.min``は以下のようになります。
 
-```dart
+{{< highlight dart >}}
     mainAxisSize: MainAxisSize.min,
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_05.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment.spaceEvenly"/>
 
@@ -118,7 +118,7 @@ class MyApp extends StatelessWidget {
 ここまでくると、あと残っているのは、要素自体を均等に配置することだと思います。  
 そう言うときは``Expanded``を使います。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Expanded',
   home: Container(
@@ -140,7 +140,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/expanded_01.png" style="min-width:300px;max-width:600px;" alt="Expanded"/>
 
@@ -149,7 +149,7 @@ return MaterialApp(
 
 さらにflexを指定することで、要素の幅を変更できます。
 
-```dart
+{{< highlight dart >}}
     return MaterialApp(
       title: 'Expanded',
       home: Container(
@@ -169,9 +169,9 @@ return MaterialApp(
         ),
       ),
     );
-```
+{{< /highlight >}}
 
-<img src="/images/basic/layout/04/expanded_02.png" style="min-width:300px;max-width:600px;" alt="Expanded flex"/>
+<img src="/images/basic/layout/04/expanded_02.png" style="min-width:300px;max-width:300px;" alt="Expanded flex"/>
 
 このように他の要素の2倍のサイズで赤い領域が確保されました。  
 flexの数値を変えることで、自由に設定が可能です。  
@@ -184,7 +184,7 @@ CrossAxisAlignmentには他にStretchとBaselineと言う2つの要素があり�
 
 ``CrossAxisAlignment.stretch``を使うと以下のように画面いっぱいまで要素を広げることが可能になります。
 
-```dart
+{{< highlight dart >}}
   home: Container(
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -194,8 +194,8 @@ CrossAxisAlignmentには他にStretchとBaselineと言う2つの要素があり�
       ],
     ),
   ),
-```
-```dart
+{{< /highlight >}}
+{{< highlight dart >}}
   home: Container(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -205,7 +205,7 @@ CrossAxisAlignmentには他にStretchとBaselineと言う2つの要素があり�
       ],
     ),
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/alignment_06.png" style="min-width:300px;max-width:600px;" alt="CrossAxisAlignmentのStretch"/>
 
@@ -215,7 +215,7 @@ CrossAxisAlignmentには他にStretchとBaselineと言う2つの要素があり�
 
 文字の大きさの違う2つを並べると通常はこのようになります。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Center(
@@ -236,12 +236,12 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 <img src="/images/basic/layout/04/alignment_07.png" style="min-width:300px;max-width:600px;" alt="CrossAxisAlignmentのBaseline適応前"/>
 
 これを``CrossAxisAlignment.baseline``によって中央揃えにして以下のように表示することが可能です。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Center(
@@ -263,7 +263,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 <img src="/images/basic/layout/04/alignment_08.png" style="min-width:300px;max-width:600px;" alt="CrossAxisAlignmentのBaseline適応後"/>
 
 ### TextDirection
@@ -272,7 +272,7 @@ TextDirectionは水平方向に対する、順序の制御を行います。
 
 #### Row
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -292,14 +292,14 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_01.png" style="min-width:300px;max-width:600px;" alt="Rowの時のTextDirection.ltr"/>
 
 このままだと通常の表示と変わりません。  
 この水平方向の順序を``TextDirection.rtl``で逆転します。  
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -319,7 +319,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_02.png" style="min-width:300px;max-width:600px;" alt="Rowの時のTextDirection.rtl"/>
 
@@ -334,7 +334,7 @@ return MaterialApp(
 
 今度はColumn上での見た目についてみてみましょう。   
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -354,14 +354,14 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_03.png" style="min-width:300px;max-width:600px;" alt="Columnの時のTextDirection.ltr"/>
 
 このままだと通常の表示と変わりません。  
 この水平方向の順序を``TextDirection.rtl``で逆転します。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -381,7 +381,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_04.png" style="min-width:300px;max-width:600px;" alt="Columnの時のTextDirection.rtl"/>
 
@@ -396,7 +396,7 @@ VerticalDirectionは垂直方向に対する、順序の制御を行います。
 
 #### Row
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -416,15 +416,14 @@ return MaterialApp(
     ),
   ),
 );
-
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_05.png" style="min-width:300px;max-width:600px;" alt="Rowの時のVerticalDirection.down"/>
 
 このままだと通常の表示と変わりません。  
 この垂直方向の順序を``VerticalDirection.up``で逆転します。  
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -444,7 +443,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_06.png" style="min-width:300px;max-width:600px;" alt="Rowの時のVerticalDirection.up"/>
 
@@ -453,7 +452,7 @@ return MaterialApp(
 #### Column
 今度はColumn上での見た目についてみてみましょう。   
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -473,14 +472,14 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_07.png" style="min-width:300px;max-width:600px;" alt="Columnの時のVerticalDirection.down"/>
 
 このままだと通常の表示と変わりません。  
 この垂直方向の順序を``VerticalDirection.up``で逆転します。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Direction',
   home: Container(
@@ -500,7 +499,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/04/direction_08.png" style="min-width:300px;max-width:600px;" alt="Columnの時のVerticalDirection.up"/>
 

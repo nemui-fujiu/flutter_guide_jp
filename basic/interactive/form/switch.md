@@ -15,7 +15,7 @@ description = ""
 
 「Switch」はWebページでおなじみのスイッチトグルと同じものを作成することができます。
 
-```dart
+{{< highlight dart>}}
 class _ChangeFormState extends State<ChangeForm> {
 
   bool _active = false;
@@ -47,7 +47,7 @@ class _ChangeFormState extends State<ChangeForm> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/switch_01.gif" style="min-width:300px;max-width:600px;" alt="Switch"/>
 
@@ -61,7 +61,7 @@ class _ChangeFormState extends State<ChangeForm> {
 
 「SwitchListTile」は「ListTile」の一種で、標準的なレイアウトを提供してくれます。
 
-```dart
+{{< highlight dart>}}
   Widget build(BuildContext context) {
     return Container(padding: const EdgeInsets.all(10.0), 
       child: Column(
@@ -85,7 +85,7 @@ class _ChangeFormState extends State<ChangeForm> {
       )
     );
   }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/interactive/02/switch_02.gif" style="min-width:300px;max-width:600px;" alt="SwitchListTile"/>
 

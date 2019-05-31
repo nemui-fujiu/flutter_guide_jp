@@ -11,7 +11,7 @@ description = "Containerの基本について、どんなものがありどの�
 「Container」クラスは内包する子ウィジェットをカスタマイズするために利用するウィジェットです。
 どんなことができるのかを一つずつみていきましょう。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_01.png" style="min-width:300px;max-width:600px;" alt="bule box"/>
 
@@ -45,12 +45,12 @@ widthやheightを変更することで自由にサイズを変更することが
 色の指定の仕方はColorクラスを使うことで可能です。  
 Colorは以下のように指定できます。  
 
-```dart
+{{< highlight dart >}}
 Color(0xFF42A5F5)
 Color.fromARGB(0xFF, 0x42, 0xA5, 0xF5)
 Color.fromARGB(255, 66, 165, 245)
 Color.fromRGBO(66, 165, 245, 1.0)
-```
+{{< /highlight >}}
 指定方法としてはWebやネイティブアプリでは一般的なRGBまたは16進数で指定することができます。
 
 #### Colors
@@ -58,19 +58,19 @@ Color.fromRGBO(66, 165, 245, 1.0)
 色指定のもう一つの方法としては、Colorsクラスを使うと簡単に色指定ができます。  
 いくつもの色があるので、必要な色を探して利用するだけで済むでしょう。  
 
-```dart
+{{< highlight dart >}}
 Colors.green
 Colors.bule
 Colors.red
-```
+{{< /highlight >}}
 
 また、探した色が目的の色とそぐわない場合でも、濃淡を変更することが可能です。  
 指定方法は以下の2種類があります。  
 
-```dart
+{{< highlight dart >}}
 Colors.blue[900],
 Colors.blue.shade900
-```
+{{< /highlight >}}
 
 濃淡で指定できる数値はどちらの方法でも以下の通りです。
 
@@ -95,14 +95,14 @@ Colors.blue.shade900
 
 ここに文字を表示してみましょう。
 
-```dart
+{{< highlight dart >}}
   child: Container(
     color: Colors.blue,
     width: 300.0,
     height: 300.0,
     child: Text('word')
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_02.png" style="min-width:300px;max-width:600px;" alt="text box"/>
 
@@ -114,7 +114,7 @@ Colors.blue.shade900
 
 次にPaddingをあててもう少し中心によってもらいましょう。
 
-```dart
+{{< highlight dart >}}
   child: Container(
     color: Colors.blue,
     width: 300.0,
@@ -122,23 +122,23 @@ Colors.blue.shade900
     child: Text('word'),
     padding: const EdgeInsets.all(50.0),
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_03.png" style="min-width:300px;max-width:600px;" alt="padding box"/>
 
 Paddingは、EdgeInsetsクラスによって設定します。  
-全周囲にかける場合は```EdgeInsets.all```特定の辺にのみPaddingを付ける場合は```EdgeInsets.only```を使いましょう。
+全周囲にかける場合は``EdgeInsets.all``特定の辺にのみPaddingを付ける場合は``EdgeInsets.only``を使いましょう。
 
-```dart
+{{< highlight dart >}}
     padding: const EdgeInsets.only(top:50.0),
-```
+{{< /highlight >}}
 <img src="/images/basic/layout/02/container_04.png" style="min-width:300px;max-width:600px;" alt="padding top box"/>
 
 #### Margin
 
 Paddingを当てたので今度はMarginを指定してみましょう。
 
-```dart
+{{< highlight dart >}}
   child: Container(
     color: Colors.blue,
     width: 300.0,
@@ -146,17 +146,17 @@ Paddingを当てたので今度はMarginを指定してみましょう。
     child: Text('word'),
     margin: const EdgeInsets.all(100.0),
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_05.png" style="min-width:300px;max-width:600px;" alt="margin box"/>
 
 
 横幅がMarginで入りきらなくなったため、押しつぶされてしまいましたが、このようにMarginもかけることが可能です。  
-Paddingと同じく全周囲にかける場合は```EdgeInsets.all```特定の辺にのみMarginを付ける場合は```EdgeInsets.only```を使いましょう。
+Paddingと同じく全周囲にかける場合は``EdgeInsets.all``特定の辺にのみMarginを付ける場合は``EdgeInsets.only``を使いましょう。
 
-```dart
+{{< highlight dart >}}
     margin: const EdgeInsets.only(left:50.0),
-```
+{{< /highlight >}}
 <img src="/images/basic/layout/02/container_06.png" style="min-width:300px;max-width:600px;" alt="margin left box"/>
 
 
@@ -165,7 +165,7 @@ Paddingと同じく全周囲にかける場合は```EdgeInsets.all```特定の�
 次に文字列の配置を調整してみましょう。  
 Aligmentを使って中央に表示してみます。  
 
-```dart
+{{< highlight dart >}}
   child: Container(
     color: Colors.blue,
     width: 300.0,
@@ -173,7 +173,7 @@ Aligmentを使って中央に表示してみます。
     child: Text('word'),
     alignment: Alignment.center,
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_07.png" style="min-width:300px;max-width:600px;" alt="alignment center"/>
 
@@ -191,7 +191,7 @@ Alignmentクラスには他にも以下のようなものがあります。
 
 また、transformを使うことによって、形状を変化させることが可能です。  
 
-```dart
+{{< highlight dart >}}
   child: Container(
     color: Colors.blue,
     width: 300.0,
@@ -199,7 +199,7 @@ Alignmentクラスには他にも以下のようなものがあります。
     child: Text('word'),
     transform: Matrix4.rotationZ(0.1),
   ),
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/02/container_08.png" style="min-width:300px;max-width:600px;" alt="transform center"/>
 

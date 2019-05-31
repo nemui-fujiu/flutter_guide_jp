@@ -20,7 +20,7 @@ AppBarを透過させる事によりヘッダーを目立たなくさせ、全�
 
 <img src="https://flutter.ctrnost.com/images/layout/header/special/transparent.png" style="min-width:300px" alt="transparent header" />
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context)
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 ※イメージの読み込み設定をしていない場合は[こちら](/settings/)
 
@@ -92,14 +92,14 @@ Stackについては別で記事を用意しますが、簡単に説明すると
 
 上記「透過ヘッダー」のAppBarにある「backgroundColor」を以下のように変更すると半透明なヘッダーが作成可能です。
 
-```dart
+{{< highlight dart>}}
   Scaffold(
     backgroundColor: Colors.transparent,
     appBar: new AppBar(
       title: const Text("Standard AppBar"),
       backgroundColor: Colors.blue.withOpacity(0.3),
       elevation: 0.0,
-```
+{{< /highlight >}}
 
 色味については「Colors」クラスを使って設定し、「withOpacity」で透過率を設定しています。  
 範囲は0~1の間で設定する事によって、透過される割合が変わります。
@@ -116,7 +116,7 @@ Stackについては別で記事を用意しますが、簡単に説明すると
 <img src="/images/layout/header/special/swip_hide_header.gif" style="min-width:300px;max-width:300px" alt="hide header" />
 
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context)
@@ -151,6 +151,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 「NestedScrollView」で全体をスクロールできるようにして、「SliverAppBar」を使ってヘッダーを非表示にできるようにしています。

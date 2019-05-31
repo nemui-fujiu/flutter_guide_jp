@@ -13,7 +13,7 @@ ColumnとRowはその名の通り、行と列を制御します。
 
 ### Row
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,24 +32,24 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/03/column_row_01.png" style="min-width:300px;max-width:600px;" alt="row"/>
 
 要素の横並びは以下のようにRowクラスに対してウィジェットのリストを持つことで実現できます。  
-```dart
+{{< highlight dart >}}
 child: Row(
   children: <Widget>[
     Container( color: Colors.blue, width: 100, height:100 ),
     Container( color: Colors.red, width: 100, height:100 ),
   ],
 ),
-```
+{{< /highlight >}}
 
 
 ### Column
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,25 +68,25 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/03/column_row_02.png" style="min-width:300px;max-width:600px;" alt="column"/>
 
 要素の縦並びは以下のようにColumnクラスに対してウィジェットのリストを持つことで実現できます。  
-```dart
+{{< highlight dart >}}
 child: Column(
   children: <Widget>[
     Container( color: Colors.blue, width: 100, height:100 ),
     Container( color: Colors.red, width: 100, height:100 ),
   ],
 ),
-```
+{{< /highlight >}}
 
 ### 入れ子
 
 ColumnとRowは入れ子構造にすることができます。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Container(
@@ -108,7 +108,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/03/column_row_06.svg" style="min-width:300px;max-width:600px;" alt="Column Rowの入れ子"/>
 
@@ -135,7 +135,7 @@ Containerの説明でもしましたAlignmentと同じで、位置の調整が�
 
 ColumnとRowをそれぞれ``MainAxisAlignment.start``で並べると以下のようになります。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Container(
@@ -148,8 +148,8 @@ return MaterialApp(
     ),
   ),
 );
-```
-```dart
+{{< /highlight >}}
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Container(
@@ -162,7 +162,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/03/column_row_04.png" style="min-width:300px;max-width:600px;" alt="MainAxisAlignment start"/>
 
@@ -177,7 +177,7 @@ MainAxisAlignmentの基本の位置調整は以下の3種類です。
 
 ColumnとRowをそれぞれ``CrossAxisAlignment.start``で並べると以下のようになります。
 
-```dart
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Container(
@@ -190,8 +190,8 @@ return MaterialApp(
     ),
   ),
 );
-```
-```dart
+{{< /highlight >}}
+{{< highlight dart >}}
 return MaterialApp(
   title: 'Column & Row',
   home: Container(
@@ -204,7 +204,7 @@ return MaterialApp(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/03/column_row_05.png" style="min-width:300px;max-width:600px;" alt="CrossAxisAlignment start"/>
 

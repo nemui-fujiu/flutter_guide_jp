@@ -31,10 +31,10 @@ StatefulWidgetクラスそれ自体は不変ですが、Stateクラスでウィ�
 1. 最小の状態保持クラスを作成します。  
 ``lib/main.dart``の末尾に以下を追加して下ください。
 
-    ```dart
+    {{< highlight dart >}}
     class RandomWordsState extends State<RandomWords> {
     }
-    ```
+    {{< /highlight >}}
 
     ``State<RandomWords>``と書くことで汎用のStateクラスのジェネリクスにRandomWordsを記載し、RandomWordsウィジェットの状態を維持できるようにします。
     この時点では、Stateクラスの必須メソッドが実装されていないためIDEではエラーが出ていると思いますが、あとで解消するのでそのままにして次へ進んでください。
@@ -42,16 +42,16 @@ StatefulWidgetクラスそれ自体は不変ですが、Stateクラスでウィ�
 2. RandomWordsウィジェットの作成
 StatefulWidgetを継承してウィジェットを作成します。
 
-    ```dart
+    {{< highlight dart >}}
     class RandomWords extends StatefulWidget {
       @override
       RandomWordsState createState() => new RandomWordsState();
     }
-    ```
+    {{< /highlight >}}
 
 3. RandomWordsStateクラスにbuildメソッドを追加
 
-    ```dart
+    {{< highlight dart >}}
     class RandomWordsState extends State<RandomWords> {
       @override
       Widget build(BuildContext context) {
@@ -59,12 +59,12 @@ StatefulWidgetを継承してウィジェットを作成します。
         return Text(wordPair.asPascalCase);
       }
     }
-    ```
+    {{< /highlight >}}
 
 4. MyAppの修正   
 ``MyApp``クラスを以下のように修正しましょう。
 
-    ```dart
+    {{< highlight dart >}}
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ StatefulWidgetを継承してウィジェットを作成します。
         );
       }
     }
-    ```
+    {{< /highlight >}}
 
 5. 実行
 ソースを保存しホットリロードが実行されることで、ソースが書き換わります。

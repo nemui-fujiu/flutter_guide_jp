@@ -11,7 +11,7 @@ description = "SnackBarを使う場合いくつかの方法があります。一
 SnackBarを使う場合いくつかの方法があります。
 一番単純なのはStatelessWidgetを使った方法です。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -50,24 +50,24 @@ class SnackBarPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/dialog/03/snack_bar.gif" style="min-width:300px;max-width:600px;" alt="SnackBar"/>
 
 
 スナックバーを表示するにあたり、まずは表示したい情報をSnackBarクラスで作成します。
 
-```dart
+{{< highlight dart>}}
   final snackBar = SnackBar(
     content: Text('お知らせ！'),
   ),
-```
+{{< /highlight >}}
 
 作成したSnackBarを``Scaffold.of``の``showSnackBar``に渡すことで、Scaffoldで作成されている画面の下部からスナックバーが表示されます。
 
-```dart
+{{< highlight dart>}}
   Scaffold.of(context).showSnackBar(snackBar);
-```
+{{< /highlight >}}
 
 スナックバーには、``action``によるボタン追加や``duration``による表示時間の制御が可能です。
 
@@ -81,7 +81,7 @@ class SnackBarPage extends StatelessWidget {
 
 StatefulWidgetでスナックバーを表示したい場合は以下のようにします。
 
-```dart
+{{< highlight dart>}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -118,13 +118,13 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}
 
 この時、_MainPageStateクラス内に``home: Scaffold(``が定義されていると正しく動作しないため注意が必要です。
 
 どうしても_MainPageStateクラス内に``Scaffold``を定義したい場合は以下のように``GlobalKey``により``ScaffoldState``を持つこと、作成することが可能です。
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   final GlobalKey<ScaffoldState> _scaffoldstate = new GlobalKey<ScaffoldState>();
@@ -148,4 +148,4 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-```
+{{< /highlight >}}

@@ -11,7 +11,7 @@ description = "「TabBar」を使うことで、簡単にヘッダーにタブ�
 「TabBar」を使うことで、簡単にヘッダーにタブバーを作ることができるようになります。   
 今回は、「TabBar」を使ったサンプルを説明していきます。 
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> {
 
   final _tab = <Tab> [
@@ -64,7 +64,7 @@ class TabPage extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 <img src="/images/basic/navigation/03/tabbar_01.gif" style="min-width:300px;max-width:600px;" alt="TabBar"/>
 
 
@@ -86,7 +86,7 @@ class TabPage extends StatelessWidget {
 「TabBar」を作るときは、「TabBar」、「TabBarView」に「TabController」クラスを設定するか、「DefaultTabController」の子要素としてそれぞれを作成する方法の2種類があります。
 まずは、「DefaultTabController」での作成方法をみていきましょう。  
 
-```dart
+{{< highlight dart>}}
 return DefaultTabController(
   length: _tab.length,
   child: Scaffold(
@@ -105,43 +105,43 @@ return DefaultTabController(
     ),
   ),
 );
-```
+{{< /highlight >}}
 
 「DefaultTabController」には必ず、「TabBar」で表示するタブ数を``length``に設定しておかなければなりません。
 
-```dart
+{{< highlight dart>}}
 return DefaultTabController(
   length: _tab.length,
   child: Scaffold(
     appBar: AppBar(
-```
+{{< /highlight >}}
 
 次に「AppBar」の``bottom``に「TabBar」クラスを定義して、表示するタブのリストを渡します。  
 
-```dart
+{{< highlight dart>}}
 appBar: AppBar(
   title: const Text('TabBar'),
   bottom: TabBar(
     tabs: _tab,
   ),
 ),
-```
+{{< /highlight >}}
 
 今回は「Tab」の一覧は``_tab``変数に定義しておきます。
 
-```dart
+{{< highlight dart>}}
   final _tab = <Tab> [
     Tab( text:'Car', icon: Icon(Icons.directions_car)),
     Tab( text:'Bisycle', icon: Icon(Icons.directions_bike)),
     Tab( text:'Boat', icon: Icon(Icons.directions_boat)),
   ];
-```
+{{< /highlight >}}
 
 これで、タブの表示ができましたが、画面表示の切り替えも確認しましょう。  
 ``body``に「TabBarView」クラスを定義し、表示する画面となるウィジェットの一覧を渡します。  
 今回は「TabPage」という画面ウィジェットを作ってあるので、一覧として設定して完成です。
 
-```dart
+{{< highlight dart>}}
 body: TabBarView(
   children: <Widget> [
     TabPage(title: 'Car', icon: Icons.directions_car),
@@ -149,14 +149,14 @@ body: TabBarView(
     TabPage(title: 'Boat', icon: Icons.directions_boat),
   ]
 ),
-```
+{{< /highlight >}}
 
 ### TabController
 
 今度は「TabController」での書き方をみてみましょう。
 
 
-```dart
+{{< highlight dart>}}
 class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin {
 
   TabController _tabController;
@@ -193,12 +193,12 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
     );
   }
 }
-```
+{{< /highlight >}}
 
 このように「TabController」を使うときは必ず``initState``メソッドで、初期化し、``dispose``メソッドで破棄を書いてください。  
 こうすることで、``_MainPageState``の作成、破棄と同じタイミングで「TabController」も作成、破棄が行われるようになります。  
 
-```dart
+{{< highlight dart>}}
 
   TabController _tabController;
 
@@ -213,18 +213,18 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
     _tabController.dispose();
     super.dispose();
   }
-```
+{{< /highlight >}}
 
 次に「TabBar」、「TabBarView」それぞれに「TabController」を設定することで、タブが動作するようになるので、完成です。
 
-```dart
+{{< highlight dart>}}
 bottom: TabBar(
   controller: _tabController,
   tabs: _tab,
 ),
-```
+{{< /highlight >}}
 
-```dart
+{{< highlight dart>}}
 body: TabBarView(
   controller: _tabController,
   children: <Widget> [
@@ -233,5 +233,5 @@ body: TabBarView(
     TabPage(title: 'Boat', icon: Icons.directions_boat),
   ]
 ),
-```
+{{< /highlight >}}
 

@@ -30,7 +30,7 @@ ListViewを構築するためには4つの方法があります。
 読み込みと同時に全てのリストを描画するためあまり量の多いリストには向いていません。  
 メニューの一覧や設定画面などで利用すると良いかと思います。  
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 <img src="/images/basic/layout/05/listview_01.png" style="min-width:300px;max-width:600px;" alt="ListView"/>
 
 デフォルトコンストラクタの場合は``children``のみが必須項目です。  
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
 
 以下のように記載すれば設定画面ぽくなります。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -105,7 +105,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/05/listview_02.png" style="min-width:300px;max-width:600px;" alt="ListView"/>
 
@@ -116,7 +116,7 @@ class MyApp extends StatelessWidget {
 #### ListTile
 ``_menuItem``を以下のように書き換えてみましょう。  
 
-```dart
+{{< highlight dart >}}
   Widget _menuItem(String title, Icon icon) {
     return Container(
       decoration: new BoxDecoration(
@@ -140,7 +140,7 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/05/listview_03.png" style="min-width:300px;max-width:600px;" alt="ListView ListTile"/>
 
@@ -153,7 +153,7 @@ class MyApp extends StatelessWidget {
 ``itemBuilder``は画面表示時に実行されるため、無限にリストを作成することが可能です。  
 チャットやメッセージ、検索結果の表示などに利用すると良いかと思います。 
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -198,7 +198,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/05/listview_04.png" style="min-width:300px;max-width:600px;" alt="ListView.builder"/>
 
@@ -211,7 +211,7 @@ class MyApp extends StatelessWidget {
 表示する要素が事前にわかっており、一行ごとに何か要素を差し込みたい場合に利用する書き方です。  
 indexは``itemBuilder``、``separatorBuilder``ともに0から始まります。
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -263,7 +263,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/05/listview_05.png" style="min-width:300px;max-width:600px;" alt="ListView.separated"/>
 
@@ -274,7 +274,7 @@ class MyApp extends StatelessWidget {
 デフォルトで``Axis.vertical``となっていますが、``Axis.horizontal``に変えてみましょう。  
 (表示するのが文言だとわかりづらいので、``_messageItem``を変更しています。)
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -315,7 +315,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```
+{{< /highlight >}}
 
 <img src="/images/basic/layout/05/listview_06.png" style="min-width:300px;max-width:600px;" alt="ListView.separated"/>
 
@@ -324,6 +324,5 @@ class MyApp extends StatelessWidget {
 
 
 ## 参考
----
 
 [ListView](https://docs.flutter.io/flutter/widgets/ListView-class.html)

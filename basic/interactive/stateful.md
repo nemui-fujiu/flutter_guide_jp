@@ -18,19 +18,19 @@ StatelessWidgeとStatefulWidgetの違いについては[こちら](/tutorial/tut
 
 どのようなものかを慣れるためにStatefulクラスを使い値を保持するアプリケーションを作っていきましょう。  
 
-```dart
+{{< highlight dart >}}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
   }
 }
-```
+{{< /highlight>}}
 
 これで``StatelessWidget``の準備ができました。  
 これから、``StatefulWidget``と``State``を作っていきます。
 
-```dart
+{{< highlight dart >}}
 class ClickGood extends StatefulWidget {
   @override
   _ClickGoodState createState() => _ClickGoodState();
@@ -40,11 +40,11 @@ class _ClickGoodState extends State<ClickGood> {
     return
   }
 }
-```
+{{< /highlight>}}
 
 次に``State``に状態を持つための変数を用意しましょう。
 
-```dart
+{{< highlight dart >}}
 class _ClickGoodState extends State<ClickGood> {
   bool _active = false;
   
@@ -52,13 +52,13 @@ class _ClickGoodState extends State<ClickGood> {
     return
   }
 }
-```
+{{< /highlight>}}
 
 次にクリック時の処理を作成していきます。    
 今回は処理をわかりやすくするため、クリック時の動作をメソッド化しておきます。    
 状態を保持する変数を変更する場合は必ず``setState``を実装し、その中で値を変更するようにしなければなりません。  
 
-```dart
+{{< highlight dart >}}
 class _ClickGoodState extends State<ClickGood> {
   bool _active = false;
   
@@ -72,7 +72,7 @@ class _ClickGoodState extends State<ClickGood> {
     return
   }
 }
-```
+{{< /highlight>}}
 
 クリックイベントとして、``_handleTap``を呼び出すことで、``_active``がクリックされるたびにtrue・falseと入れ替わるようになります。  
 あとは画面に表示するレイアウトを作成してください。  
@@ -80,7 +80,7 @@ class _ClickGoodState extends State<ClickGood> {
 
 今回のプログラムの全文はこちら。  
 
-```dart
+{{< highlight dart >}}
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -152,6 +152,6 @@ class _ClickGoodState extends State<ClickGood> {
     );
   }
 }
-```
+{{< /highlight>}}
 
 <img src="/images/basic/interactive/01/stateful_02.gif" style="min-width:300px;max-width:600px;" alt="Stateful movie"/>
