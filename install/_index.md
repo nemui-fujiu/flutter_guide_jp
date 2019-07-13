@@ -69,7 +69,7 @@ FlutterはAndoird、iOSの2つのアプリを一括で作るため、両方の�
 コマンドは以下になります。
 
 {{< highlight bash >}}
-$ fluttter doctor
+$ flutter doctor
 {{< /highlight >}}
 
 実際のコマンドを叩くとFlutterでの開発に必要な情報を収集して診断してくれます。
