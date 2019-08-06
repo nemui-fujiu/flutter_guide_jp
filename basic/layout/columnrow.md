@@ -110,7 +110,7 @@ return MaterialApp(
 );
 {{< /highlight >}}
 
-<img src="/images/basic/layout/03/column_row_06.svg" style="min-width:300px;max-width:600px;" alt="Column Rowの入れ子"/>
+<img src="/images/basic/layout/03/column_row_06.png" style="min-width:300px;max-width:600px;" alt="Column Rowの入れ子"/>
 
 このように入れ子構造を作ることによって、行列を自在に組み合わせてレイアウトが作成できます。  
 

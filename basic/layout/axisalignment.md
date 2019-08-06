@@ -13,9 +13,9 @@ ColumnとRow基本や、MinAxisAlignment、CrossAxisAlignmentの初歩的なつ�
 
 ### MainAxisAlignmentのSpace
 
-これから説明するSpaceに対する制御は行でも列でもどちらでも同じように作用します。　
-今回のサンプルは、スペース部分がわかりづらいため、スペースが白く見えるようにしています。  　
-ご自身で試すときは``debugPaintSizeEnabled``を使って確認するのも良いでしょう。  
+これから説明するSpaceに対する制御は行でも列でもどちらでも同じように作用します。    
+今回のサンプルは、スペース部分がわかりづらいため、スペースが白く見えるようにしています。    
+ご自身で試すときは``debugPaintSizeEnabled``を使って確認するのも良いでしょう。    
 [debugPaintSizeEnabled](/basic/detail01/#debugPaintSizeEnabled)
 
 #### MainAxisAlignment.spaceAround

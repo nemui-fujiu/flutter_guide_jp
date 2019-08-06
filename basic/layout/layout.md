@@ -114,7 +114,7 @@ class MyApp extends StatelessWidget {
 <img src="/images/basic/layout/01/non_material_desgin.png" style="min-width:300px;max-width:600px;" alt="non material desgin"/>
 
 デザインが適用されている状態と言うのがどう言うことかと言うと、例えば上記の例だとTextクラスに着目するとわかりやすいです。  
-マテリアルデザインを利用せずレイアウトする場合は、Textに必要な表示の詳細を設定しないと、正しく表示ができなくなってしまいます。　　
+マテリアルデザインを利用せずレイアウトする場合は、Textに必要な表示の詳細を設定しないと、正しく表示ができなくなってしまいます。    
 以下のように変更して確認してみてください。
 
 {{< highlight dart >}}

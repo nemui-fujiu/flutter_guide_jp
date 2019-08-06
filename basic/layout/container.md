@@ -163,7 +163,7 @@ Paddingと同じく全周囲にかける場合は``EdgeInsets.all``特定の辺�
 ### 揃え
 
 次に文字列の配置を調整してみましょう。  
-Aligmentを使って中央に表示してみます。  
+Alignmentを使って中央に表示してみます。  
 
 {{< highlight dart >}}
   child: Container(
@@ -203,6 +203,6 @@ Alignmentクラスには他にも以下のようなものがあります。
 
 <img src="/images/basic/layout/02/container_08.png" style="min-width:300px;max-width:600px;" alt="transform center"/>
 
-TransformはX,Y,Z軸の回転やサイズ(Scale)の変更、子要素の一の変更(translate)などができます。
+TransformはX,Y,Z軸の回転や尺度(Scale)の変更、子要素の位置変更(translate)などができます。
 
 
