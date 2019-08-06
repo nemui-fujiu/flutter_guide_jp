@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
 ### GridView.extent
 
 ``GridView.extent``は``maxCrossAxisExtent``で指定した幅を最大値として、グリッドを並べる表示方法です。  
-例えば、500pxの横幅のある「GridView」に対して、``maxCrossAxisExtent``を150と指定した婆、幅125pxのグリッドが4列並んだ表示となります。  
+例えば、500pxの横幅のある「GridView」に対して、``maxCrossAxisExtent``を150と指定した場合、幅125pxのグリッドが4列並んだ表示となります。  
 
 
 {{< highlight dart >}}
