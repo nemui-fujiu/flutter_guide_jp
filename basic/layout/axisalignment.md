@@ -503,7 +503,7 @@ return MaterialApp(
 
 <img src="/images/basic/layout/04/direction_08.png" style="min-width:300px;max-width:600px;" alt="Columnの時のVerticalDirection.up"/>
 
-``TextDirection.up``を指定すると、今度は上下が順序が反転したのがわかるかと思います。  
+``VerticalDirection.up``を指定すると、今度は上下が順序が反転したのがわかるかと思います。  
 このように垂直方向への逆転をするのが、VerticalDirectionです。 
 
 

@@ -108,7 +108,7 @@ FlatButton(
 
 ### RaisedButton
 
-「RaiseButton」ボタンは立体的なボタンを作成したいときに利用します。
+RaiseButtonは立体的なボタンを作成したいときに利用します。
 
 {{< highlight dart>}}
 RaisedButton(
@@ -125,11 +125,11 @@ RaisedButton(
 
 <img src="/images/basic/interactive/02/button_02.gif" style="min-width:300px;max-width:600px;" alt="RaisedButton"/>
 
-「FlatButton」クラスとほとんど同じですが、立体的に見える動作をします。
+FlatButtonクラスとほとんど同じですが、立体的に見える動作をします。
 
 ### OutlineButton
 
-「RaiseButton」は外側に枠線が付いているボタンになります。
+OutlineButtonは外側に枠線が付いているボタンになります。
 
 {{< highlight dart>}}
 OutlineButton(
