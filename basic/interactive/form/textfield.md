@@ -199,7 +199,7 @@ class _ChangeFormState extends State<ChangeForm> {
       _text = e;
     });
   }
-  _printLatestValue() {
+  void _printLatestValue() {
     print("入力状況: ${_textEditingController.text}");
   }
 

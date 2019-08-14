@@ -51,11 +51,11 @@ class _ChangeFormState extends State<ChangeForm> {
 
 <img src="/images/basic/interactive/02/switch_01.gif" style="min-width:300px;max-width:600px;" alt="Switch"/>
 
-- ``activeColor``スイッチが選択状態になっている時の下地の色
-- ``activeTrackColor``スイッチが選択状態になっている時のトラッカーの色
-- ``inactiveColor``スイッチが未選択状態になっている時の下地の色
-- ``inactiveThumbColor``スイッチが未選択状態になっている時のトラッカーの色
-- ``onChanged``値を変更した時に動作する。
+- ``activeColor``はスイッチが選択状態になっている時の下地の色
+- ``activeTrackColor``はスイッチが選択状態になっている時のトラッカーの色
+- ``inactiveColor``はスイッチが未選択状態になっている時の下地の色
+- ``inactiveThumbColor``はスイッチが未選択状態になっている時のトラッカーの色
+- ``onChanged``は値を変更した時に動作する。
 
 ### SwitchListTile
 
