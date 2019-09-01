@@ -16,7 +16,7 @@ class _MainPageState extends State<MainPage> {
 
   final _tab = <Tab> [
     Tab( text:'Car', icon: Icon(Icons.directions_car)),
-    Tab( text:'Bisycle', icon: Icon(Icons.directions_bike)),
+    Tab( text:'Bicycle', icon: Icon(Icons.directions_bike)),
     Tab( text:'Boat', icon: Icon(Icons.directions_boat)),
   ];
 
@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
         body: TabBarView(
             children: <Widget> [
               TabPage(title: 'Car', icon: Icons.directions_car),
-              TabPage(title: 'Bisycle', icon: Icons.directions_bike),
+              TabPage(title: 'Bicycle', icon: Icons.directions_bike),
               TabPage(title: 'Boat', icon: Icons.directions_boat),
             ]
         ),

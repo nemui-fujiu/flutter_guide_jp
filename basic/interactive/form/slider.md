@@ -53,15 +53,15 @@ class _ChangeFormState extends State<ChangeForm> {
 
 <img src="/images/basic/interactive/02/slider_01.gif" style="min-width:300px;max-width:600px;" alt="Slider"/>
 
-- ``label``スライダーを動かしている時に表示されるラベル
-- ``min``最小値
-- ``max``最大値
-- ``value``スライダーの値(double)
-- ``activeColor``スライダーの選択範囲の線の色
-- ``inactiveColor``スライダーの未選択範囲の線の色
+- ``label``はスライダーを動かしている時に表示されるラベル
+- ``min``は最小値
+- ``max``は最大値
+- ``value``はスライダーの値(double)
+- ``activeColor``はスライダーの選択範囲の線の色
+- ``inactiveColor``はスライダーの未選択範囲の線の色
 - ``divisions``はメモリの数値を決めるための値で、``(max - min) / divisions``の計算で値が決定します。
-- ``onChanged``値を変更した時に動作する。
-- ``onChangeStart``値を変更開始した時に動作する。
-- ``onChangeEnd``値を変更終了した時に動作する。
+- ``onChanged``は値を変更した時に動作する。
+- ``onChangeStart``は値を変更開始した時に動作する。
+- ``onChangeEnd``は値を変更終了した時に動作する。
 
 ``divisions``など特に細かな設定をしない場合はスライダーはdoubleの値を取得できるため、細かな値を取ることも可能です。

@@ -279,9 +279,10 @@ class _MainPageState extends State<MainPage> {
 ``Matrix4.rotation``を使って制御していきます。  
 
  「AnimatedContainer」の``transform``に対して以下いずれかを動的に変更することで、要素を回転させるアニメーションを作成できます。 
- - ``Matrix4.rotationX``
- - ``Matrix4.rotationY``
- - ``Matrix4.rotationZ``
+
+- ``Matrix4.rotationX``
+- ``Matrix4.rotationY``
+- ``Matrix4.rotationZ``
  
  画面右下の「FloatingActionButton」を押すと、``_onTap``が動作し、X軸に対してが0から45に変えることで。X軸方向へ回転しています。   
 

@@ -96,7 +96,7 @@ final Future<Database> database = openDatabase(
 - ``onDowngrade``ではデータ定義の更新を取り消すときに利用します。
 - ``readOnly``ではデータベースを読み込み専用のデータとして利用したいときにtrueを設定してください。
 
-※マイグレーションについては、そのうち書きます。
+※マイグレーションについては、[こちら](/logic/migration)を確認してください。
 
 SQLiteで利用できるデータ型は以下を確認してください。
 [Storage Classes and Datatypes](https://www.sqlite.org/datatype3.html)

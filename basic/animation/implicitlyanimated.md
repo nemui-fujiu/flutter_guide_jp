@@ -102,8 +102,8 @@ class _MainPageState extends State<MainPage> {
 
 <img src="/images/basic/animation/02/animated_padding.gif" style="min-width:300px;max-width:600px;" alt="AnimatedPadding"/>
 
-AnimatedPaddingは``padding``でPaddingを変更します。    
-サンプルは、``50``から、``0``にPaddingを変更しているので、青い部分が広くなったのがわかると思います。   
+AnimatedPaddingは``padding``で余白を変更します。    
+サンプルは、Paddingを``50``から、``0``に変更しているので、オレンジ色の部分がなくなったのがわかると思います。   
 
 <span id="animated_size"></span>
 ## AnimatedSize
@@ -144,7 +144,7 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
 <img src="/images/basic/animation/02/animated_size.gif" style="min-width:300px;max-width:600px;" alt="AnimatedSize"/>
 
 AnimatedSizeは``width``または``height``の値を変更してアニメーションさせます。   
-サンプルは、``width``を``50``から、``100``に変更しているので、横長に大木になります。    
+サンプルは、``width``を``50``から、``100``に変更しているので、横に大きくなり正方形に変わりました。    
 
 <span id="animated_default_text_style"></span>
 ## AnimatedDefaultTextStyle

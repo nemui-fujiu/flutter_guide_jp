@@ -20,52 +20,52 @@ enum Answers{
   YES,
   NO
 }
-
 class _MainPageState extends State<MainPage> {
 
   String _value = '';
 
   void _setValue(String value) => setState(() => _value = value);
 
-  Future _showDialog() async {
-    var value = await showDialog<Answers>(
-      context: context,
-      builder: (BuildContext context) => new SimpleDialog(
-        title: new Text('SimpleDialog'),
-        children: <Widget>[
-          new SimpleDialogOption(child: new Text('Yes'),onPressed: (){Navigator.pop(context, Answers.YES);},),
-          new SimpleDialogOption(child: new Text('NO'),onPressed: (){Navigator.pop(context, Answers.NO);},),
-        ],
-      ),
-    );
-    switch(value) {
-      case Answers.YES:
-        _setValue('Yes');
-        break;
-      case Answers.NO:
-        _setValue('NO');
-        break;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('SimpleDialog'),
-      ),
-      body: new Container(
-        padding: new EdgeInsets.all(32.0),
-        child: new Center(
-          child: new Column(
-            children: <Widget>[
-              new Text(_value, style: TextStyle(fontSize: 50, color: Colors.blueAccent, fontWeight: FontWeight.w600),),
-              new RaisedButton(onPressed: _showDialog, child: new Text('ダイアログを開く'),)
-            ],
-          ),
+    return new Container(
+      padding: new EdgeInsets.all(32.0),
+      child: new Center(
+        child: new Column(
+          children: <Widget>[
+            new Text(_value, style: TextStyle(fontSize: 50, color: Colors.blueAccent, fontWeight: FontWeight.w600),),
+            new RaisedButton(onPressed: () {openDialog(context);}, child: new Text('ダイアログを開く'),)
+          ],
         ),
       ),
     );
+  }
+
+  void openDialog(BuildContext context) {
+      showDialog<Answers>(
+        context: context,
+        builder: (BuildContext context) => new SimpleDialog(
+          title: new Text('SimpleDialog'),
+          children: <Widget>[
+            createDialogOption(context, Answers.YES, 'Yes'),
+            createDialogOption(context, Answers.NO, 'No')
+          ],
+        ),
+      ).then((value) {
+        switch(value) {
+        case Answers.YES:
+        _setValue('Yes');
+        break;
+        case Answers.NO:
+        _setValue('No');
+        break;
+        }
+      });
+  }
+
+
+  createDialogOption(BuildContext context, Answers answer, String str) {
+    return new SimpleDialogOption(child: new Text(str),onPressed: (){Navigator.pop(context, answer);},);
   }
 }
 {{< /highlight >}}
