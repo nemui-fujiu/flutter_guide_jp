@@ -1,13 +1,13 @@
 +++
 title = "永続化データのマイグレーション"
-date = 2019-09-31T00:00:00+09:00
+date = 2019-08-30T00:00:00+09:00
 draft = false
 weight = 511
 description = "sqfliteを使ったデータ永続化をする上で、アプリの更新時にマイグレーションが発生した場合にonUpgradeをどのように対処するかを詳しくみていきましょう。"
-featured_images = "/images/logic/db/db_sqlite.svg"
+featured_images = "/images/logic/db/db_migration.svg"
 +++
 
-<img src="/images/logic/db/db_sqlite_top.svg" width="90%" alt="body layout">
+<img src="/images/logic/db/db_migration_top.svg" width="90%" alt="body layout">
 
 
 sqfliteを使ったデータ永続化をする上で、アプリの更新時にマイグレーションが発生した場合にどのように対処するかを詳しくみていきましょう。
