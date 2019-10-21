@@ -271,6 +271,13 @@ await db.rawQuery('SELECT * FROM memo WHERE id = ?', [id]);
   });
 {{< /highlight >}}
 
+LIKE句を使いたい場合は以下のように書きます。
+
+{{< highlight dart >}}
+final id = 1;
+await db.query('memo', where: 'id LIKE ?', whereArgs: ['$id%']); // 1から始まるidにマッチする。
+{{< /highlight >}}
+
 ## データの更新
 
 データの更新は以下のように行います。
