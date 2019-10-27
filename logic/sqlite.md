@@ -274,7 +274,7 @@ await db.rawQuery('SELECT * FROM memo WHERE id = ?', [id]);
 LIKE句を使いたい場合は以下のように書くことができます。
 このように書くことで「Flutter」から始まるtextにマッチします。
 {{< highlight dart >}}
-final id = 'Flutter';
+final text = 'Flutter';
 await db.query('memo', where: 'text LIKE ?', whereArgs: ['${text}%']);
 {{< /highlight >}}
 
