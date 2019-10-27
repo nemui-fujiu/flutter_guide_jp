@@ -272,16 +272,16 @@ await db.rawQuery('SELECT * FROM memo WHERE id = ?', [id]);
 {{< /highlight >}}
 
 LIKE句を使いたい場合は以下のように書くことができます。
-
+このように書くことで「Flutter」から始まるtextにマッチします。
 {{< highlight dart >}}
 final id = 'Flutter';
-await db.query('memo', where: 'text LIKE ?', whereArgs: ['${text}%']); // 「Flutter」から始まるtextにマッチする。
+await db.query('memo', where: 'text LIKE ?', whereArgs: ['${text}%']);
 {{< /highlight >}}
 
 IN句を使いたい場合は以下のように書くことができます。
 
 {{< highlight dart >}}
-final id = [1, 2]
+final ids = [1, 2]
 await db.query('memo', where: 'id IN (${ids.join(', ')})');
 {{< /highlight >}}
 
