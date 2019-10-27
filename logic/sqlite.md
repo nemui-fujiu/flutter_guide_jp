@@ -117,7 +117,7 @@ class Memo {
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'name': text,
+      'text': text,
       'priority': priority,
     };
   }
@@ -147,7 +147,7 @@ await insertMemo(todo);
 Map<String, dynamic> toMap() {
   return {
     'id': id,
-    'name': text,
+    'text': text,
     'priority': priority,
   };
 }
@@ -271,11 +271,18 @@ await db.rawQuery('SELECT * FROM memo WHERE id = ?', [id]);
   });
 {{< /highlight >}}
 
-LIKE句を使いたい場合は以下のように書きます。
+LIKE句を使いたい場合は以下のように書くことができます。
 
 {{< highlight dart >}}
-final id = 1;
-await db.query('memo', where: 'id LIKE ?', whereArgs: ['$id%']); // 1から始まるidにマッチする。
+final id = 'Flutter';
+await db.query('memo', where: 'text LIKE ?', whereArgs: ['${text}%']); // 「Flutter」から始まるtextにマッチする。
+{{< /highlight >}}
+
+IN句を使いたい場合は以下のように書くことができます。
+
+{{< highlight dart >}}
+final id = [1, 2]
+await db.query('memo', where: 'id IN (${ids.join(', ')})');
 {{< /highlight >}}
 
 ## データの更新
@@ -448,7 +455,7 @@ class Memo {
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'name': text,
+      'text': text,
       'priority': priority,
     };
   }
@@ -464,3 +471,5 @@ class Memo {
 ## 参考
 
 [Persist data with SQLite](https://flutter.dev/docs/cookbook/persistence/sqlite)
+[db.queryで使える要素](https://pub.dev/documentation/sqflite/latest/sqlite_api/DatabaseExecutor/query.html)
+[IN句について](https://github.com/tekartik/sqflite/issues/15)
