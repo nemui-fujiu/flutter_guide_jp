@@ -25,7 +25,7 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
     このパッケージはランダムに英単語を生成するためのライブラリで、デモやテストなどランダムに文字列を取得したいときに利用します。   
     [english_words](https://pub.dartlang.org/packages/english_words)
     
-    Flutterで使える外部パッケージは[Flutter Paclages](https://pub.dartlang.org/flutter)で手に入るので、何か作るときは一度パッケージがないか探してみるといいと思います。
+    Flutterで使える外部パッケージは[Flutter Packages](https://pub.dartlang.org/flutter)で手に入るので、何か作るときは一度パッケージがないか探してみるといいと思います。
 
 2. 通常は``/pubspec.yaml``に変更を加え保存すると同時にパッケージがダウンロードされます。
 もしダウンロードされない場合は直接以下コマンドを叩いてパッケージを取得してください。
