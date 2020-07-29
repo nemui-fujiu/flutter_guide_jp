@@ -60,7 +60,7 @@ Color.fromRGBO(66, 165, 245, 1.0)
 
 {{< highlight dart >}}
 Colors.green
-Colors.bule
+Colors.blue
 Colors.red
 {{< /highlight >}}
 
