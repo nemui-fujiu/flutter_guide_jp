@@ -9,7 +9,7 @@ description = "ColoumnやRowを使う上で必要なMainAxisAlignment & CrossAxi
 ## MainAxisAlignment & CrossAxisAlignment
 
 ColoumnやRowを使う上で必要なMainAxisAlignment & CrossAxisAlignmentで設定できる各種表示についての基本を解説していきます。  
-ColumnとRow基本や、MinAxisAlignment、CrossAxisAlignmentの初歩的なつかいかたについては[Column & Row](/basic/detail03/)をご確認ください。　　
+ColumnとRow基本や、MinAxisAlignment、CrossAxisAlignmentの初歩的なつかいかたについては[Column & Row](/basic/layout/columnrow/)をご確認ください。　　
 
 ### MainAxisAlignmentのSpace
 
