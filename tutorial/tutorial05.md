@@ -15,7 +15,7 @@ FlutterにはStatelessとStatefulの2種類のWidgetがあります。
 
 ### StatefulWidget & StatelessWidget
 
-StatelessWidgetで扱うあたいはすべて不変的でありプロパティを変更することはできません。  
+StatelessWidgetで扱う値はすべて不変的でありプロパティを変更することはできません。  
 すべての値はfinalな値となります。
 StatefulWidgetではウィジェットの生存期間中に変更される値を維持することができ、実装するには、少なくとも2つのクラスが必要です。
 
