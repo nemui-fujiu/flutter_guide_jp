@@ -11,7 +11,7 @@ description = "入力による情報変更をインタラクティブに行う�
 
 ## 目次
 
-- [Stateul](stateful) 
+- [Stateful](stateful) 
 - [Form Button](form/button) 
 - [Form TextField](form/textfield) 
 - [Form CheckBox](form/checkbox) 
