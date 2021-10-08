@@ -17,8 +17,8 @@ keywords = "Flutter,アプリ,チュートリアル,tutorial,入門,外部パッ
       dependencies:
          flutter:
            sdk: flutter
-         cupertino_icons: ^0.1.2
-         english_words: ^3.1.0
+         cupertino_icons: ^0.1.3
+         english_words: ^4.0.0
     {{< /highlight >}}
 
     今回取り込むのは``english_words``というパッケージです。
